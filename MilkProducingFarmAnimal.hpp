@@ -1,0 +1,14 @@
+//
+// Created by reyha on 27/02/2019.
+//
+
+#ifndef ENGISFARM_MILKPRODUCINGFARMANIMAL_HPP
+#define ENGISFARM_MILKPRODUCINGFARMANIMAL_HPP
+
+
+class MilkProducingFarmAnimal {
+
+};
+
+
+#endif //ENGISFARM_MILKPRODUCINGFARMANIMAL_HPP

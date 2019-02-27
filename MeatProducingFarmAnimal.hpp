@@ -1,0 +1,14 @@
+//
+// Created by reyha on 27/02/2019.
+//
+
+#ifndef ENGISFARM_MEATPRODUCINGFARMANIMAL_HPP
+#define ENGISFARM_MEATPRODUCINGFARMANIMAL_HPP
+
+
+class MeatProducingFarmAnimal {
+
+};
+
+
+#endif //ENGISFARM_MEATPRODUCINGFARMANIMAL_HPP

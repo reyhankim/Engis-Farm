@@ -1,0 +1,14 @@
+//
+// Created by reyha on 27/02/2019.
+//
+
+#ifndef ENGISFARM_EGGPRODUCINGFARMANIMAL_HPP
+#define ENGISFARM_EGGPRODUCINGFARMANIMAL_HPP
+
+
+class EggProducingFarmAnimal {
+
+};
+
+
+#endif //ENGISFARM_EGGPRODUCINGFARMANIMAL_HPP
