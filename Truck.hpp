@@ -7,7 +7,7 @@
 
 #include "Renderable.hpp"
 
-class Truck {
+class Truck : public Renderable {
 	private :
 		SideProduct **priceListSideProduct();
 		Product **priceListProduct();

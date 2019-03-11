@@ -7,7 +7,7 @@
 
 #include "Renderable.hpp"
 
-class Well {
+class Well : public Renderable {
 	public :
 		void render();
 
