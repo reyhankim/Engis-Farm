@@ -10,15 +10,17 @@
 
 #define NULL nil
 
-template <class T>
 class Player : public Renderable {
     // Data member:
 private:
-    int currentWater;
     const int maxWater; //kapasitas maksimum air yang dapat dibawa
-    Product *productInventory;
-    int facing; //1 : facing up, 2 : facing down, 3 : facing right, 4 : facing left
+
     int gold; //uang yang dimiliki player
+    int currentWater;
+
+    int facing; //1 : facing up, 2 : facing down, 3 : facing right, 4 : facing left
+
+    Product** productInventory; // array of pointer to Product
 
 public:
 	//CTOR
@@ -28,39 +30,38 @@ public:
 	~Player();
 	
 	//Render
-	void render();
+	virtual char render();
 	
 	//method dasar (lupa namanya)
-	int find(T element);
-	bool isEmpty();
-	void addInventory(T element);
-	void removeInventory(T element);
-	T getInventory(int indeks);
+	int checkInFront(Product* element);
+	bool isInventoryEmpty();
+	void addToInventory(Product* element);
+	void removeFromInventory(Product* element);
 	
     // SELECTORS here
-	int getCurrentWater() const;
-	Product getProductInventory(int i) const;
-	int getFacing() const;
 	int getGold() const;
+	int getFacing() const;
+	int getCurrentWater() const;
+	Product* getProductFromInventory(int index) const;
 	
-	void setCurrentWater();
-	void setProductInventory(int i, Product new_product);
-	//setFacing akan diatur di method move
 	void setGold() const;
+	void setCurrentWater(int water);
 	
     // METHOD move here
+	// setFacing akan diatur di method move
     void up();
     void down();
     void left();
     void right();
 
-    // METHOD talk here
     void talk();
 
-    // Other METHODS below
     void interact();
+
     void kill();
+
     void grow();
+
     void emptyBag();
 };
 
