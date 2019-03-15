@@ -1,13 +1,16 @@
 //
 // Created by reyha on 27/02/2019.
-//
+// Last edited by SiR on 16/03/2019
 
 #ifndef ENGISFARM_FACILITY_HPP
 #define ENGISFARM_FACILITY_HPP
 
 
 class Facility {
-
+	public :
+		bool isWalkable(){
+			return false;
+		}	
 };
 
 

@@ -8,11 +8,6 @@
 #include "Renderable.hpp"
 
 class Truck : public Renderable {
-	private :
-		SideProduct **priceListSideProduct();
-		Product **priceListProduct();
-		//Product -> Jenis Product -> Int (harga)
-
 	public :
 		//CTOR
 		Truck();
@@ -24,11 +19,7 @@ class Truck : public Renderable {
 		void render();
 		
 		//METHOD
-		Product getPriceProduct();
-		SideProduct getPriceSideProduct();
-		void convertToGold(); //proses penjualan
-		void setPriceProduct(int price);
-		void setPriceSideProduct(int price);
+		void convertToGold(Product product); //proses penjualan
 		
 		//note to developer : convertToGold memiliki Player::setGold()
 };

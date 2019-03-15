@@ -7,7 +7,23 @@
 
 
 class Mixer {
-
+	private :
+		Product **listSideProduct;
+		//struktur array
+		// | Side Product | Farm Product 1 | Farm Product 2 |
+	
+	public :
+		//CTOR
+		Mixer();
+		
+		//DTOR
+		~Mixer();
+		
+		//Render
+		void render();
+		
+		//METHOD
+		SideProduct mix(FarmProduct farmProduct, FarmProduct farmProduct);
 };
 
 
