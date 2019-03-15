@@ -9,7 +9,7 @@
 
 class Well : public Renderable {
 	public :
-		void render();
+		char render() const;
 
 };
 
