@@ -6,6 +6,10 @@
 #define ENGISFARM_MIXER_HPP
 
 
+#include "Product.hpp"
+#include "SideProduct.hpp"
+#include "FarmProduct.hpp"
+
 class Mixer {
 	private :
 		Product **listSideProduct;
@@ -23,7 +27,7 @@ class Mixer {
 		void render();
 		
 		//METHOD
-		SideProduct mix(FarmProduct farmProduct, FarmProduct farmProduct);
+		SideProduct mix(FarmProduct farmProduct1, FarmProduct farmProduct2);
 };
 
 

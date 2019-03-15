@@ -6,6 +6,8 @@
 #define ENGISFARM_LAND_HPP
 
 
+#include "Renderable.hpp"
+
 class Land : public Renderable {
 	protected :
 		bool grassed;
@@ -19,7 +21,7 @@ class Land : public Renderable {
 		void setGrass(bool input);
 		bool getGrass() const;
 		
-		bool isWalkable(){
+		bool isWalkable() const {
 			return true;
 		}
 };

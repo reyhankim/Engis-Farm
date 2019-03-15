@@ -5,6 +5,8 @@
 #ifndef ENGISFARM_CELL_HPP
 #define ENGISFARM_CELL_HPP
 
+#include "Renderable.hpp"
+
 template <class T>
 class Cell {
 	private :
