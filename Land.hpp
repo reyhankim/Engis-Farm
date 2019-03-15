@@ -21,7 +21,7 @@ class Land : public Renderable {
 		void setGrass(bool input);
 		bool getGrass() const;
 		
-		bool isWalkable(){
+		bool isWalkable() const {
 			return true;
 		}
 };

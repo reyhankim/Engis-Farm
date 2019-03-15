@@ -6,6 +6,7 @@
 #define ENGISFARM_TRUCK_HPP
 
 #include "Renderable.hpp"
+#include "Product.hpp"
 
 class Truck : public Renderable {
 	public :
@@ -16,7 +17,7 @@ class Truck : public Renderable {
 		~Truck();
 		
 		//Render
-		void render();
+		char render() const;
 		
 		//METHOD
 		void convertToGold(Product product); //proses penjualan
