@@ -5,9 +5,17 @@
 #ifndef ENGISFARM_COW_HPP
 #define ENGISFARM_COW_HPP
 
+#include "MeatProducingFarmAnimal.hpp"
+#include "MilkProducingFarmAnimal.hpp"
 
-class Cow {
+class Cow : public MeatProducingFarmAnimal, public MilkProducingFarmAnimal {
+    public:
+        // mengembalikan karakter W
+        virtual char Render();
 
+        virtual string sound();
+
+        virtual Product* getProduct();
 };
 
 

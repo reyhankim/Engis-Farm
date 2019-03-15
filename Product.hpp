@@ -7,7 +7,8 @@
 
 
 class Product {
-
+    private:
+        int harga;
 };
 
 

@@ -5,9 +5,11 @@
 #ifndef ENGISFARM_MEATPRODUCINGFARMANIMAL_HPP
 #define ENGISFARM_MEATPRODUCINGFARMANIMAL_HPP
 
+#include "FarmAnimal.hpp"
 
-class MeatProducingFarmAnimal {
-
+class MeatProducingFarmAnimal : public FarmAnimal {
+    public:
+        virtual Product* getProduct();
 };
 
 

@@ -5,9 +5,14 @@
 #ifndef ENGISFARM_DUCK_HPP
 #define ENGISFARM_DUCK_HPP
 
+#include "EggProducingFarmAnimal.hpp"
 
-class Duck {
+class Duck : public EggProducingFarmAnimal {
+    public:
+        // mengembalikan karakter D
+        virtual char Render();
 
+        virtual Product* getProduct();
 };
 
 

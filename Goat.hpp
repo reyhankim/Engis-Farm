@@ -5,9 +5,16 @@
 #ifndef ENGISFARM_GOAT_HPP
 #define ENGISFARM_GOAT_HPP
 
+#include "MilkProducingFarmAnimal.hpp"
 
-class Goat {
+class Goat : public MilkProducingFarmAnimal {
+    public:
+        // mengembalikan karakter G
+        virtual char Render();
 
+        virtual string sound();
+
+        virtual Product* getProduct();
 };
 
 

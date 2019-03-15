@@ -5,9 +5,16 @@
 #ifndef ENGISFARM_HORSE_HPP
 #define ENGISFARM_HORSE_HPP
 
+#include "MeatProducingFarmAnimal.hpp"
 
-class Horse {
+class Horse : public MeatProducingFarmAnimal {
+    public:
+        // mengembalikan karakter H
+        virtual char Render();
 
+        virtual string sound();
+
+        virtual Product* getProduct();
 };
 
 
