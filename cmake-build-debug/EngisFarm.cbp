@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug"/>
+				<Option working_dir="C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="EngisFarm">
-				<Option output="C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/EngisFarm.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug"/>
+				<Option output="C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/EngisFarm.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 EngisFarm"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 EngisFarm"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="EngisFarm/fast">
-				<Option output="C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/EngisFarm.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug"/>
+				<Option output="C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/EngisFarm.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,124 +53,124 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 EngisFarm/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 EngisFarm/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug"/>
+				<Option working_dir="C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug"/>
+				<Option working_dir="C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/EngisFarm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/reyha/CLionProjects/Engi-s-Farm/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Barn.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Barn.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/BeefRolade.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/BeefRolade.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Cell.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Cell.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Chicken.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Chicken.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Coop.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Coop.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Cow.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Cow.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Duck.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Duck.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Egg.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Egg.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/EggProducingFarmAnimal.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/EggProducingFarmAnimal.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Facility.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Facility.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/FarmAnimal.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/FarmAnimal.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/FarmProduct.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/FarmProduct.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Goat.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Goat.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Grass.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Grass.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Horse.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Horse.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/InteractTemplate.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/InteractTemplate.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Land.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Land.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Meat.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Meat.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/MeatProducingFarmAnimal.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/MeatProducingFarmAnimal.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Milk.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Milk.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/MilkProducingFarmAnimal.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/MilkProducingFarmAnimal.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Mixer.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Mixer.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Player.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Player.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Product.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Product.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Renderable.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Renderable.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/SideProduct.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/SideProduct.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Swine.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Swine.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Truck.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Truck.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/Well.hpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/Well.hpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/main.cpp">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/main.cpp">
 			<Option target="EngisFarm"/>
 		</Unit>
-		<Unit filename="C:/Users/reyha/CLionProjects/EngisFarm/CMakeLists.txt">
+		<Unit filename="C:/Users/reyha/CLionProjects/Engi-s-Farm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
