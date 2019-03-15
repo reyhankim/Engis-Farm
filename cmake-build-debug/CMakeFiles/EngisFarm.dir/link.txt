@@ -1,3 +1,1 @@
-C:\Users\reyha\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -E remove -f CMakeFiles\EngisFarm.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\EngisFarm.dir/objects.a @CMakeFiles\EngisFarm.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\EngisFarm.dir/objects.a -Wl,--no-whole-archive  -o EngisFarm.exe -Wl,--out-implib,libEngisFarm.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EngisFarm.dir\linklibs.rsp
+/usr/bin/c++  -g   CMakeFiles/EngisFarm.dir/main.cpp.o  -o EngisFarm 

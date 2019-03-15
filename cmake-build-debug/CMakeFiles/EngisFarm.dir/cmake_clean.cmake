@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/EngisFarm.dir/main.cpp.obj"
+  "CMakeFiles/EngisFarm.dir/main.cpp.o"
   "EngisFarm.pdb"
-  "EngisFarm.exe"
-  "EngisFarm.exe.manifest"
-  "libEngisFarm.dll.a"
+  "EngisFarm"
 )
 
 # Per-language clean rules from dependency scanning.
