@@ -6,6 +6,8 @@
 #define ENGISFARM_LAND_HPP
 
 
+#include "Renderable.hpp"
+
 class Land : public Renderable {
 	protected :
 		bool grassed;

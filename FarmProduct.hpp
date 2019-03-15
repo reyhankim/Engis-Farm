@@ -7,7 +7,16 @@
 
 
 class FarmProduct {
+    protected:
+        int harga;
+        void setHarga();
 
+    public:
+        //ctor
+        FarmProduct();
+
+        //selector
+        int getHarga();
 };
 
 
