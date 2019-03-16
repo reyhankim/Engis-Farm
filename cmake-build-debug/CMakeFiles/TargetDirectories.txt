@@ -1,3 +1,0 @@
-/home/novendraw/CLionProjects/Engi-s-Farm/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/novendraw/CLionProjects/Engi-s-Farm/cmake-build-debug/CMakeFiles/EngisFarm.dir
-/home/novendraw/CLionProjects/Engi-s-Farm/cmake-build-debug/CMakeFiles/edit_cache.dir

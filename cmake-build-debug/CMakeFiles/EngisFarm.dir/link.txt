@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/EngisFarm.dir/main.cpp.o  -o EngisFarm 
