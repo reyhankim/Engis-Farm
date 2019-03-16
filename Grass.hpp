@@ -6,8 +6,11 @@
 #define ENGISFARM_GRASS_HPP
 
 
-class Grass {
-	
+#include "Land.hpp"
+
+class Grass : public Land {
+public:
+    char render() const;
 };
 
 

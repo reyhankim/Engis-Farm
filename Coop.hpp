@@ -6,8 +6,11 @@
 #define ENGISFARM_COOP_HPP
 
 
-class Coop {
+#include "Land.hpp"
 
+class Coop : public Land {
+public:
+    char render() const;
 };
 
 

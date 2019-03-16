@@ -11,11 +11,11 @@
 class Cow : public MeatProducingFarmAnimal, public MilkProducingFarmAnimal {
     public:
         // mengembalikan karakter W
-        virtual char Render();
+        char render() const;
 
-        virtual string sound();
+        string sound() const;
 
-        virtual Product* getProduct();
+        Product* getProduct() const override;
 };
 
 

@@ -22,9 +22,9 @@ class FarmAnimal : public Renderable {
         // CTOR
         FarmAnimal();
 
-        bool isInteractable();
+        bool isInteractable() const;
 
-        bool isHungry();
+        bool isHungry() const;
 
         virtual string sound() = 0;
 

@@ -7,8 +7,11 @@
 
 
 class Product {
-    private:
-        int harga;
+private:
+    int harga;
+public:
+    int getHarga() const;
+    void setHarga();
 };
 
 

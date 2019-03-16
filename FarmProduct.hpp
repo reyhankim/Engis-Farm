@@ -6,17 +6,12 @@
 #define ENGISFARM_FARMPRODUCT_HPP
 
 
-class FarmProduct {
-    protected:
-        int harga;
-        void setHarga();
+#include "Product.hpp"
 
+class FarmProduct : Product {
     public:
         //ctor
         FarmProduct();
-
-        //selector
-        int getHarga();
 };
 
 

@@ -6,9 +6,9 @@
 #define ENGISFARM_LAND_HPP
 
 
-#include "Renderable.hpp"
+#include "Cell.hpp"
 
-class Land : public Renderable {
+class Land : public Cell {
 	protected :
 		bool grassed;
 		void randomGrass();

@@ -7,7 +7,7 @@
 
 #include "FarmProduct.hpp"
 
-class SwineMeat : public FarmProduct{
+class SwineMeat : public FarmProduct {
     public:
         //ctor
         SwineMeat();

@@ -10,11 +10,11 @@
 class Goat : public MilkProducingFarmAnimal {
     public:
         // mengembalikan karakter G
-        virtual char Render();
+        char render() const;
 
-        virtual string sound();
+        string sound() const;
 
-        virtual Product* getProduct();
+        Product* getProduct() const override;
 };
 
 

@@ -9,7 +9,7 @@
 
 class EggProducingFarmAnimal : public FarmAnimal {
     public:
-        virtual Product* getProduct();
+        virtual Product* getProduct() const;
 };
 
 

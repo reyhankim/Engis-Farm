@@ -8,7 +8,7 @@
 #include "Renderable.hpp"
 
 template <class T>
-class Cell {
+class Cell /*: public Renderable */ {
 	private :
 		Renderable **renderThing;
 	
@@ -21,7 +21,7 @@ class Cell {
 		
 		//SELECTOR
 		void setCell(int x, int y, T element);
-		T getCell(int x, int y);
+		T getCell(int x, int y) const;
 };
 
 

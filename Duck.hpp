@@ -10,9 +10,9 @@
 class Duck : public EggProducingFarmAnimal {
     public:
         // mengembalikan karakter D
-        virtual char Render();
+        char render() const;
 
-        virtual Product* getProduct();
+        Product* getProduct() const override;
 };
 
 

@@ -5,10 +5,10 @@
 #ifndef ENGISFARM_TRUCK_HPP
 #define ENGISFARM_TRUCK_HPP
 
-#include "Renderable.hpp"
 #include "Product.hpp"
+#include "Facility.hpp"
 
-class Truck : public Renderable {
+class Truck : public Facility {
 	public :
 		//CTOR
 		Truck();
