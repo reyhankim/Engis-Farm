@@ -6,8 +6,11 @@
 #define ENGISFARM_SIDEPRODUCT_HPP
 
 
-class SideProduct {
+#include "Product.hpp"
 
+class SideProduct : public Product {
+public:
+    SideProduct();
 };
 
 

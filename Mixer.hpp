@@ -9,8 +9,9 @@
 #include "Product.hpp"
 #include "SideProduct.hpp"
 #include "FarmProduct.hpp"
+#include "Facility.hpp"
 
-class Mixer {
+class Mixer : public Facility {
 	private :
 		Product **listSideProduct;
 		//struktur array

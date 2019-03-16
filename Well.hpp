@@ -5,12 +5,11 @@
 #ifndef ENGISFARM_WELL_HPP
 #define ENGISFARM_WELL_HPP
 
-#include "Renderable.hpp"
+#include "Facility.hpp"
 
-class Well : public Renderable {
+class Well : public Facility {
 	public :
 		char render() const;
-
 };
 
 

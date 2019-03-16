@@ -6,9 +6,11 @@
 #define ENGISFARM_FACILITY_HPP
 
 
-class Facility {
+#include "Cell.hpp"
+
+class Facility : public Renderable {
 	public :
-		bool isWalkable(){
+		bool isWalkable() const {
 			return false;
 		}	
 };

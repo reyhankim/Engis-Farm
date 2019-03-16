@@ -6,8 +6,11 @@
 #define ENGISFARM_BEEFROLADE_HPP
 
 
-class BeefRolade {
+#include "SideProduct.hpp"
 
+class BeefRolade : public SideProduct {
+public:
+    BeefRolade();
 };
 
 

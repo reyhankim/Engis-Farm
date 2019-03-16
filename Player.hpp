@@ -30,7 +30,7 @@ public:
 	~Player();
 	
 	//Render
-	virtual char render();
+	virtual char render() const;
 	
 	//method dasar (lupa namanya)
 	int checkInFront(Product* element);
@@ -54,11 +54,11 @@ public:
     void left();
     void right();
 
-    void talk();
+    void talk();			// Marked by Kim: Talk untuk masing-masing hewan kan script-nya beda, apa mending template aja?
 
-    void interact();
+    void interact();		// Marked by Kim: Interact untuk masing-masing hewan kan beda, apa mending template aja?
 
-    void kill();
+    void kill();			// Marked by Kim: Kill untuk masing-masing hewan menghasilkan product berbeda, apa mending template aja?
 
     void grow();
 

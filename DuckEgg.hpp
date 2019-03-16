@@ -7,7 +7,7 @@
 
 #include "FarmProduct.hpp"
 
-class DuckEgg : public  FarmProduct{
+class DuckEgg : public FarmProduct {
     public:
         DuckEgg();
 };
