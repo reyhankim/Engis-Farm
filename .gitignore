@@ -33,3 +33,9 @@
 
 # VS Code files
 .vscode
+
+# Idea files
+.idea/
+
+# cmake-build-debug files
+.cmake-build-debug/

@@ -24,7 +24,7 @@ class Mixer {
 		~Mixer();
 		
 		//Render
-		void render();
+		void render() const;
 		
 		//METHOD
 		SideProduct mix(FarmProduct farmProduct1, FarmProduct farmProduct2);
