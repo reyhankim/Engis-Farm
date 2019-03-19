@@ -8,8 +8,11 @@
 
 #include "SideProduct.hpp"
 
+// Class BeefRolade adalah blueprint dari objek SideProduct yang bernama BeefRolade
+// BeefRolade = CowMeat + ChickenEgg
 class BeefRolade : public SideProduct {
 public:
+    // Ctor BeefRolade, menentukan harga BeefRolade
     BeefRolade();
 };
 

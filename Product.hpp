@@ -6,13 +6,14 @@
 #define ENGISFARM_PRODUCT_HPP
 
 
+// Class Product adalah blueprint dari seluruh produk yang dapat disimpan dan dijual
 class Product {
 private:
-    int harga;
+    int harga;              // Menyimpan harga dari Product
 
 public:
-    int getHarga() const;
-    void setHarga();
+    int getHarga() const;   // Getter harga
+    void setHarga();        // Setter harga
 };
 
 

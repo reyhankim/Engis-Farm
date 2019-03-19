@@ -14,7 +14,7 @@ class Goat : public MilkProducingFarmAnimal {
 
         string sound() const;
 
-        Product* getProduct() const override;
+        Product* getProduct() const override;   
 };
 
 
