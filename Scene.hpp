@@ -30,7 +30,8 @@ class Scene {
         int farmMapWidth;
 
         // Memanggil method render setiap objek dalam Fields dan menyimpannya
-        // dalam Canvas, kemudian melakukan hal yang sama dengan Animals.
+        // dalam Canvas, kemudian melakukan hal yang sama dengan Animals dan
+        // terakhir player.
         void UpdateFarmMap();
 
     public:
