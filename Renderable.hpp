@@ -8,7 +8,7 @@
 
 class Renderable {
 	public :
-		virtual char render() = 0;
+		virtual char render() const = 0;
 		virtual bool isWalkable() = 0;
 	
 	protected :

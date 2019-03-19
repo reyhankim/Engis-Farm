@@ -11,7 +11,7 @@
 class Cow : public MeatProducingFarmAnimal, public MilkProducingFarmAnimal {
     public:
         // mengembalikan karakter W
-        char render() const;
+        char render() const override;
 
         string sound() const;
 

@@ -10,7 +10,7 @@
 class Goat : public MilkProducingFarmAnimal {
     public:
         // mengembalikan karakter G
-        char render() const;
+        char render() const override;
 
         string sound() const;
 

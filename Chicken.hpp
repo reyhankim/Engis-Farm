@@ -11,7 +11,7 @@
 class Chicken : public EggProducingFarmAnimal, public MeatProducingFarmAnimal {
     public:
         // mengembalikan karakter C
-        char render() const;
+        char render() const override;
 
         string sound() const;
 

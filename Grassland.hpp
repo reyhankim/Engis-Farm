@@ -10,7 +10,7 @@
 
 class Grassland : public Land {
 public:
-    char render() const;
+    char render() const override;
 };
 
 

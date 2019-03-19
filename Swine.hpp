@@ -10,7 +10,7 @@
 class Swine : public MeatProducingFarmAnimal {
     public:
         // mengembalikan karakter S
-        char render() const;
+        char render() const override;
 
         string sound() const;
 
