@@ -8,13 +8,16 @@
 #include "MeatProducingFarmAnimal.hpp"
 #include "MilkProducingFarmAnimal.hpp"
 
+// Class Cow adalah blueprint dari objek FarmProduct
 class Cow : public MeatProducingFarmAnimal, public MilkProducingFarmAnimal {
     public:
         // mengembalikan karakter W
         char render() const override;
 
-        string sound() const;
+        // mengembalikan suara sapi misal "Moo!"
+        string sound() const override;
 
+        // mengembalikan FarmProduct yang behubungan dengan sapi
         Product* getProduct() const override;
 };
 

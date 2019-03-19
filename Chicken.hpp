@@ -8,13 +8,16 @@
 #include "EggProducingFarmAnimal.hpp"
 #include "MeatProducingFarmAnimal.hpp"
 
+// Class Chicken adalah blueprint dari objek FarmProduct
 class Chicken : public EggProducingFarmAnimal, public MeatProducingFarmAnimal {
     public:
         // mengembalikan karakter C
         char render() const override;
 
-        string sound() const;
+        // mengembalikan suara ayam misal "Petok petok!"
+        string sound() const override;
 
+        // mengembalikan FarmProduct yang behubungan dengan ayam
         Product* getProduct() const override;
 };
 

@@ -7,13 +7,16 @@
 
 #include "MilkProducingFarmAnimal.hpp"
 
+// Class Goat adalah blueprint dari objek FarmProduct
 class Goat : public MilkProducingFarmAnimal {
     public:
         // mengembalikan karakter G
         char render() const override;
 
-        string sound() const;
+        // mengembalikan suara kambing misal "Mbheee!"
+        string sound() const override;
 
+        // mengembalikan FarmProduct yang behubungan dengan kambing
         Product* getProduct() const override;   
 };
 
