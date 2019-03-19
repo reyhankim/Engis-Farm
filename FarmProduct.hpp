@@ -8,9 +8,10 @@
 
 #include "Product.hpp"
 
+// Class FarmProduct adalah Product yang dihasilkan oleh FarmAnimal
 class FarmProduct : Product {
     public:
-        //ctor
+        //Ctor
         FarmProduct();
 };
 

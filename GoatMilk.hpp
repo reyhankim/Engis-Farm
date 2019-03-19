@@ -7,8 +7,10 @@
 
 #include "FarmProduct.hpp"
 
+// Class GoatMilk adalah FarmProduct dari Goat
 class GoatMilk : public FarmProduct{
     public:
+    //Ctor yang mengatur harga awal
         GoatMilk();
 };
 

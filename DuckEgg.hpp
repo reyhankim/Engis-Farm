@@ -7,8 +7,10 @@
 
 #include "FarmProduct.hpp"
 
+// Class DuckEgg adalah FarmProduct dari Duck
 class DuckEgg : public FarmProduct {
     public:
+    //Ctor yang mengatur harga awal
         DuckEgg();
 };
 

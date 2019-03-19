@@ -7,9 +7,10 @@
 
 #include "FarmProduct.hpp"
 
+// Class SwineMeat adalah FarmProduct dari Swine
 class SwineMeat : public FarmProduct {
     public:
-        //ctor
+        //Ctor yang mengatur harga awal
         SwineMeat();
 };
 

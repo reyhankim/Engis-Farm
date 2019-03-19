@@ -7,9 +7,10 @@
 
 #include "FarmProduct.hpp"
 
+// Class ChickenMeat adalah FarmProduct dari Chicken
 class ChickenMeat : public FarmProduct {
     public:
-        //ctor
+        //Ctor yang mengatur harga awal
         ChickenMeat();
 };
 
