@@ -7,21 +7,8 @@
 
 #include "Renderable.hpp"
 
-template <class T>
-class Cell /*: public Renderable */ {
-	private :
-		Renderable **renderThing;
-	
-	public :
-		//CTOR
-		Cell();
-		
-		//DTOR
-		~Cell();
-		
-		//SELECTOR
-		void setCell(int x, int y, T element);
-		T getCell(int x, int y) const;
+// Untuk pengelompokan kelas dan akan diinherit oleh Land dan Facilities
+class Cell : public Renderable {
 };
 
 
