@@ -7,9 +7,8 @@
 
 #include "FarmAnimal.hpp"
 
+// Class MeatProducingFarmAnimal digunakan untuk mengelompokkan animal
 class MeatProducingFarmAnimal : public FarmAnimal {
-    public:
-        virtual Product* getProduct() const;
 };
 
 

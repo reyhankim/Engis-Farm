@@ -11,24 +11,35 @@
 
 using namespace std;
 
+// Class FarmAnimal adalah abstract base class yang memiliki method animal dasar
+// dan menjadi dasar pembentukan class animal lainnya.
 class FarmAnimal : public Renderable {
     protected:
         bool interactable;
-        bool hungry;
-        void eat();
-        void autoMove();
+        int hungryLevel;
 
     public:
-        // CTOR
-        FarmAnimal();
+        // CTOR User defined
+        FarmAnimal(bool _interactable);
 
+        // getter
         bool isInteractable() const;
+        int getHungryLevel() const;
 
-        bool isHungry() const;
+        // setter
+        int setHungryLevel() const;
 
-        virtual string sound() = 0;
+        // method untuk mengurangi nilai hungryLevel animal
+        void eat();
 
-        virtual Product* getProduct() = 0;
+        // method untuk pergerakan animal
+        void autoMove();
+
+        // virtual method untuk mendapatkan suara hewan
+        virtual string sound() const = 0;
+
+        // virtual method untuk mengembalikan FarmProduct yang dihasilkan suatu hewan
+        virtual Product* getProduct() const = 0;
 };
 
 
