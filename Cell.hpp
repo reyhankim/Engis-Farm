@@ -9,6 +9,11 @@
 
 // Untuk pengelompokan kelas dan akan diinherit oleh Land dan Facilities
 class Cell : public Renderable {
+    private:
+        bool walkable;
+    public:
+        // getter untuk walkable
+		bool isWalkable();
 };
 
 

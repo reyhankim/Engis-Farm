@@ -9,10 +9,6 @@
 #include "Cell.hpp"
 
 class Facility : public Renderable {
-	public :
-		bool isWalkable() const {
-			return false;
-		}	
 };
 
 

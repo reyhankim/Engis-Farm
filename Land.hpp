@@ -11,6 +11,7 @@
 class Land : public Cell {
 	protected :
 		bool grassed;
+		// menentukan secara acak apakah Land akan berrumput (dipanggil oleh CTOR)
 		void randomGrass();
 	
 	public :
@@ -20,10 +21,6 @@ class Land : public Cell {
 		//SELECTOR
 		void setGrass(bool input);
 		bool getGrass() const;
-		
-		bool isWalkable() const {
-			return true;
-		}
 };
 
 
