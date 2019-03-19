@@ -18,5 +18,4 @@ class Chicken : public EggProducingFarmAnimal, public MeatProducingFarmAnimal {
         Product* getProduct() const override;
 };
 
-
 #endif //ENGISFARM_CHICKEN_HPP

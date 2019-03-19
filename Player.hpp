@@ -21,7 +21,7 @@ private:
     int facing; //1 : facing up, 2 : facing down, 3 : facing right, 4 : facing left
 
     Product** productInventory; // array of pointer to Product
-
+    
 public:
 	//CTOR
 	Player();

@@ -9,6 +9,7 @@
 class Product {
 private:
     int harga;
+
 public:
     int getHarga() const;
     void setHarga();

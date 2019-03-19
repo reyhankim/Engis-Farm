@@ -2,6 +2,7 @@
 #define LINKEDLIST_HPP
 
 #include <vector>
+using namespace std;
 
 template <class T>
 class LinkedList{
