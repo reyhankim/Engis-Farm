@@ -13,21 +13,22 @@
 
 using namespace std;
 
+// Kelas Scene adalah blueprint dari objek yang menampung koleksi objek pada game serta melakukan update terhadap peta pada Farm
 class Scene {
     private:
-        const int DEFAULT_FARM_MAP_HEIGHT;
-        const int DEFAULT_FARM_MAP_WIDTH;
+        const int DEFAULT_FARM_MAP_HEIGHT;      // Tinggi peta farm default
+        const int DEFAULT_FARM_MAP_WIDTH;       // Lebar peta farm default
 
-        string sessionName;
+        string sessionName;                     // nama pemain
 
-        LinkedList<Cell*> field;
-        LinkedList<FarmAnimal*> animals;
+        LinkedList<Cell*> field;                // LinkedList yang menyimpan koleksi Cell
+        LinkedList<FarmAnimal*> animals;        // LinkedList yang menyimpan koleksi Animal
         
-        Player player;
+        Player player;                          // Instansiasi player
         
-        char** farmMap;
-        int farmMapHeight;
-        int farmMapWidth;
+        char** farmMap;                         // Kumpulan hasil render karakter dari objek-objek pada farm
+        int farmMapHeight;                      // Tinggi peta farm
+        int farmMapWidth;                       // Lebar peta farm
 
         // Memanggil method render setiap objek dalam Fields dan menyimpannya
         // dalam Canvas, kemudian melakukan hal yang sama dengan Animals dan
