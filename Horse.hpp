@@ -7,13 +7,16 @@
 
 #include "MeatProducingFarmAnimal.hpp"
 
+// Class Horse adalah blueprint dari objek FarmProduct
 class Horse : public MeatProducingFarmAnimal {
     public:
         // mengembalikan karakter H
         char render() const override;
 
-        string sound() const;
+        // mengembalikan suara kuda misal "Ngihii!"
+        string sound() const override;
 
+        // mengembalikan FarmProduct yang behubungan dengan kuda
         Product* getProduct() const override;
 };
 

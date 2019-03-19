@@ -7,13 +7,16 @@
 
 #include "MeatProducingFarmAnimal.hpp"
 
+// Class Swine adalah blueprint dari objek FarmProduct
 class Swine : public MeatProducingFarmAnimal {
     public:
         // mengembalikan karakter S
         char render() const override;
 
-        string sound() const;
+        // mengembalikan suara babi misal "Ngookk"
+        string sound() const override;
 
+        // mengembalikan FarmProduct yang behubungan dengan babi
         Product* getProduct() const override;
 };
 
