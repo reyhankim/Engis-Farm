@@ -17,7 +17,7 @@ class Truck : public Facility {
 		~Truck();
 		
 		//Render
-		char render() const;
+		char render() const override;
 		
 		//METHOD
 		void convertToGold(Product product); //proses penjualan

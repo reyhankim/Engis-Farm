@@ -9,7 +9,7 @@
 
 class Well : public Facility {
 	public :
-		char render() const;
+		char render() const override;
 };
 
 

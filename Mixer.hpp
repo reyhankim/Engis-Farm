@@ -25,7 +25,7 @@ class Mixer : public Facility {
 		~Mixer();
 		
 		//Render
-		void render() const;
+		char render() const override;
 		
 		//METHOD
 		SideProduct mix(FarmProduct farmProduct1, FarmProduct farmProduct2);

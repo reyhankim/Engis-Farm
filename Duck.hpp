@@ -10,7 +10,7 @@
 class Duck : public EggProducingFarmAnimal {
     public:
         // mengembalikan karakter D
-        char render() const;
+        char render() const override;
 
         Product* getProduct() const override;
 };

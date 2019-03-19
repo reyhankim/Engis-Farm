@@ -10,7 +10,7 @@
 class Horse : public MeatProducingFarmAnimal {
     public:
         // mengembalikan karakter H
-        char render() const;
+        char render() const override;
 
         string sound() const;
 

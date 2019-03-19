@@ -30,7 +30,7 @@ public:
 	~Player();
 	
 	//Render
-	virtual char render() const;
+	char render() const override;
 	
 	//method dasar (lupa namanya)
 	int checkInFront(Product* element);
