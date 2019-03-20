@@ -9,6 +9,10 @@
 
 // Class MilkProducingFarmAnimal digunakan untuk mengelompokkan animal
 class MilkProducingFarmAnimal : public FarmAnimal {
+    public:
+        // method untuk pergerakan animal, hanya dapat bergerak di Grassland
+        // menerima List of Renderable* untuk mengecek cell yang akan ditempati
+        void autoMove(LinkedList<Renderable*> farmMap) override;
 };
 
 
