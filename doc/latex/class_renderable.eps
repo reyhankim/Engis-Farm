@@ -175,16 +175,16 @@ boxfont setfont
 1 boundaspect scale
 (Renderable) cw
 (Cell) cw
-(Facility) cw
 (FarmAnimal) cw
 (Player) cw
+(Facility) cw
 (Land) cw
-(Mixer) cw
-(Truck) cw
-(Well) cw
 (EggProducingFarmAnimal) cw
 (MeatProducingFarmAnimal) cw
 (MilkProducingFarmAnimal) cw
+(Mixer) cw
+(Truck) cw
+(Well) cw
 (Barn) cw
 (Coop) cw
 (Grassland) cw
@@ -207,21 +207,21 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (Renderable) 4.000000 6.000000 box
- (Cell) 0.000000 5.000000 box
- (Facility) 2.000000 5.000000 box
+ (Renderable) 6.000000 6.000000 box
+ (Cell) 1.000000 5.000000 box
  (FarmAnimal) 6.000000 5.000000 box
  (Player) 7.000000 5.000000 box
- (Land) 0.000000 4.000000 box
- (Mixer) 1.000000 4.000000 box
- (Truck) 2.000000 4.000000 box
- (Well) 3.000000 4.000000 box
+ (Facility) 0.000000 4.000000 box
+ (Land) 2.000000 4.000000 box
  (EggProducingFarmAnimal) 4.000000 4.000000 box
  (MeatProducingFarmAnimal) 6.000000 4.000000 box
  (MilkProducingFarmAnimal) 8.000000 4.000000 box
- (Barn) 1.000000 3.000000 box
- (Coop) 1.000000 2.000000 box
- (Grassland) 1.000000 1.000000 box
+ (Mixer) 1.000000 3.000000 box
+ (Truck) 1.000000 2.000000 box
+ (Well) 1.000000 1.000000 box
+ (Barn) 3.000000 3.000000 box
+ (Coop) 3.000000 2.000000 box
+ (Grassland) 3.000000 1.000000 box
  (Chicken) 5.000000 3.000000 box
  (Duck) 5.000000 2.000000 box
  (Chicken) 7.000000 3.000000 box
@@ -234,19 +234,15 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 4.000000 5.250000 out
+1 6.000000 5.250000 out
 solid
-0.000000 7.000000 6.000000 conn
+1.000000 7.000000 6.000000 conn
 solid
-0 0.000000 5.750000 in
+0 1.000000 5.750000 in
 solid
-1 0.000000 4.250000 out
+1 1.000000 4.250000 out
 solid
-0 2.000000 5.750000 in
-solid
-1 2.000000 4.250000 out
-solid
-1.000000 3.000000 5.000000 conn
+0.000000 2.000000 5.000000 conn
 solid
 0 6.000000 5.750000 in
 solid
@@ -260,11 +256,9 @@ solid
 solid
 1 0.000000 3.250000 out
 solid
-0 1.000000 4.750000 in
-solid
 0 2.000000 4.750000 in
 solid
-0 3.000000 4.750000 in
+1 2.000000 3.250000 out
 solid
 0 4.000000 4.750000 in
 solid
@@ -285,6 +279,14 @@ solid
 0 0.000000 1.500000 hedge
 solid
 0.000000 4.000000 1.500000 vedge
+solid
+0 2.000000 3.500000 hedge
+solid
+0 2.000000 2.500000 hedge
+solid
+0 2.000000 1.500000 hedge
+solid
+2.000000 4.000000 1.500000 vedge
 solid
 0 4.000000 3.500000 hedge
 solid

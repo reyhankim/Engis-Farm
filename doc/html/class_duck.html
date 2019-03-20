@@ -85,46 +85,58 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:affb64b601190dc21ea5fb068e3930f78"><td class="memItemLeft" align="right" valign="top"><a id="affb64b601190dc21ea5fb068e3930f78"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> () const override</td></tr>
 <tr class="separator:affb64b601190dc21ea5fb068e3930f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8f43e6ede727028e4251226710e411"><td class="memItemLeft" align="right" valign="top"><a id="a9f8f43e6ede727028e4251226710e411"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>sound</b> () const override</td></tr>
+<tr class="separator:a9f8f43e6ede727028e4251226710e411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46590448b53940ba9cceace60647682c"><td class="memItemLeft" align="right" valign="top"><a id="a46590448b53940ba9cceace60647682c"></a>
 <a class="el" href="class_product.html">Product</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProduct</b> () const override</td></tr>
 <tr class="separator:a46590448b53940ba9cceace60647682c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_egg_producing_farm_animal"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_egg_producing_farm_animal')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_egg_producing_farm_animal.html">EggProducingFarmAnimal</a></td></tr>
+<tr class="memitem:a05b041ddeee96d12695a0d8445c69fa1 inherit pub_methods_class_egg_producing_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="a05b041ddeee96d12695a0d8445c69fa1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>autoMove</b> (<a class="el" href="class_linked_list.html">LinkedList</a>&lt; <a class="el" href="class_renderable.html">Renderable</a> * &gt; farmMap) override</td></tr>
+<tr class="separator:a05b041ddeee96d12695a0d8445c69fa1 inherit pub_methods_class_egg_producing_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_farm_animal"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_farm_animal')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_farm_animal.html">FarmAnimal</a></td></tr>
+<tr class="memitem:a511313a258430a03a9328b66c325731c inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="a511313a258430a03a9328b66c325731c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>FarmAnimal</b> (bool _interactable)</td></tr>
+<tr class="separator:a511313a258430a03a9328b66c325731c inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3bbdd721661612905812389b2379b88 inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="ab3bbdd721661612905812389b2379b88"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInteractable</b> () const</td></tr>
 <tr class="separator:ab3bbdd721661612905812389b2379b88 inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60e61a526c4586c4a2597ef6369b98a4 inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="a60e61a526c4586c4a2597ef6369b98a4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isHungry</b> () const</td></tr>
-<tr class="separator:a60e61a526c4586c4a2597ef6369b98a4 inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d79c6ed1b700dfcb052a97310edab8c inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="a2d79c6ed1b700dfcb052a97310edab8c"></a>
-virtual string&#160;</td><td class="memItemRight" valign="bottom"><b>sound</b> ()=0</td></tr>
-<tr class="separator:a2d79c6ed1b700dfcb052a97310edab8c inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9adaa8eb0b9347cf5b757f0cd2df3748 inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="a9adaa8eb0b9347cf5b757f0cd2df3748"></a>
-virtual <a class="el" href="class_product.html">Product</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getProduct</b> ()=0</td></tr>
-<tr class="separator:a9adaa8eb0b9347cf5b757f0cd2df3748 inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa00afec2fda5a9b844af6ad5430a57b5 inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="aa00afec2fda5a9b844af6ad5430a57b5"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getHungryLevel</b> () const</td></tr>
+<tr class="separator:aa00afec2fda5a9b844af6ad5430a57b5 inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46f5f33a7b94b907386cc2303000d5e inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="ab46f5f33a7b94b907386cc2303000d5e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>setHungryLevel</b> () const</td></tr>
+<tr class="separator:ab46f5f33a7b94b907386cc2303000d5e inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad805436da6500547986a78f986f85904 inherit pub_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="ad805436da6500547986a78f986f85904"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>eat</b> ()</td></tr>
+<tr class="separator:ad805436da6500547986a78f986f85904 inherit pub_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_renderable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_renderable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_renderable.html">Renderable</a></td></tr>
+<tr class="memitem:a8d14de163e3e6ba3d87fa8a73ad7b063 inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a8d14de163e3e6ba3d87fa8a73ad7b063"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Renderable</b> (int x, int y)</td></tr>
+<tr class="separator:a8d14de163e3e6ba3d87fa8a73ad7b063 inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8517109ed3e4918d7d838e25c660a1 inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a3e8517109ed3e4918d7d838e25c660a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setX</b> (int x)</td></tr>
+<tr class="separator:a3e8517109ed3e4918d7d838e25c660a1 inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a521de229b0e0d647d7d9196421eaad1a inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a521de229b0e0d647d7d9196421eaad1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (int y)</td></tr>
+<tr class="separator:a521de229b0e0d647d7d9196421eaad1a inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8b600a2eccd6f21e504d3025ed655c inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="adf8b600a2eccd6f21e504d3025ed655c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> () const</td></tr>
+<tr class="separator:adf8b600a2eccd6f21e504d3025ed655c inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb82850bbd3ed66bba420607794dc78 inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a7eb82850bbd3ed66bba420607794dc78"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> () const</td></tr>
+<tr class="separator:a7eb82850bbd3ed66bba420607794dc78 inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_class_farm_animal"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_farm_animal')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_farm_animal.html">FarmAnimal</a></td></tr>
-<tr class="memitem:ad805436da6500547986a78f986f85904 inherit pro_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="ad805436da6500547986a78f986f85904"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>eat</b> ()</td></tr>
-<tr class="separator:ad805436da6500547986a78f986f85904 inherit pro_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c74f03b3e3bad594cafad6c9403aa8f inherit pro_methods_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="a0c74f03b3e3bad594cafad6c9403aa8f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>autoMove</b> ()</td></tr>
-<tr class="separator:a0c74f03b3e3bad594cafad6c9403aa8f inherit pro_methods_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_farm_animal"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_farm_animal')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_farm_animal.html">FarmAnimal</a></td></tr>
 <tr class="memitem:adfdcfc87d879c884c3498cc6101289c3 inherit pro_attribs_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="adfdcfc87d879c884c3498cc6101289c3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>interactable</b></td></tr>
 <tr class="separator:adfdcfc87d879c884c3498cc6101289c3 inherit pro_attribs_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef3b4a396f52764547171d5b2bc44d8b inherit pro_attribs_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="aef3b4a396f52764547171d5b2bc44d8b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hungry</b></td></tr>
-<tr class="separator:aef3b4a396f52764547171d5b2bc44d8b inherit pro_attribs_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_renderable"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_renderable')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_renderable.html">Renderable</a></td></tr>
-<tr class="memitem:a70fb7e98972efed5489a92006b4b6354 inherit pro_attribs_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a70fb7e98972efed5489a92006b4b6354"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
-<tr class="separator:a70fb7e98972efed5489a92006b4b6354 inherit pro_attribs_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea075942b87c751b84ac96174eff5881 inherit pro_attribs_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="aea075942b87c751b84ac96174eff5881"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
-<tr class="separator:aea075942b87c751b84ac96174eff5881 inherit pro_attribs_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386c522341a2823540666512acda32d0 inherit pro_attribs_class_farm_animal"><td class="memItemLeft" align="right" valign="top"><a id="a386c522341a2823540666512acda32d0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>hungryLevel</b></td></tr>
+<tr class="separator:a386c522341a2823540666512acda32d0 inherit pro_attribs_class_farm_animal"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_duck_8hpp_source.html">Duck.hpp</a></li>

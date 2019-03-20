@@ -74,7 +74,8 @@ Inheritance diagram for Mixer:</div>
  <div class="center">
   <img src="class_mixer.png" usemap="#Mixer_map" alt=""/>
   <map id="Mixer_map" name="Mixer_map">
-<area href="class_facility.html" alt="Facility" shape="rect" coords="0,56,77,80"/>
+<area href="class_facility.html" alt="Facility" shape="rect" coords="0,112,77,136"/>
+<area href="class_cell.html" alt="Cell" shape="rect" coords="0,56,77,80"/>
 <area href="class_renderable.html" alt="Renderable" shape="rect" coords="0,0,77,24"/>
   </map>
 </div></div>
@@ -84,19 +85,32 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e934b686923fe1dc274a260421b8991"><td class="memItemLeft" align="right" valign="top"><a id="a6e934b686923fe1dc274a260421b8991"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> () const override</td></tr>
 <tr class="separator:a6e934b686923fe1dc274a260421b8991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9498a0ebf96a41f4fcfead28d7b282c4"><td class="memItemLeft" align="right" valign="top"><a id="a9498a0ebf96a41f4fcfead28d7b282c4"></a>
-<a class="el" href="class_side_product.html">SideProduct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mix</b> (<a class="el" href="class_farm_product.html">FarmProduct</a> farmProduct1, <a class="el" href="class_farm_product.html">FarmProduct</a> farmProduct2)</td></tr>
-<tr class="separator:a9498a0ebf96a41f4fcfead28d7b282c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_attribs_class_renderable"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_renderable')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_renderable.html">Renderable</a></td></tr>
-<tr class="memitem:a70fb7e98972efed5489a92006b4b6354 inherit pro_attribs_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a70fb7e98972efed5489a92006b4b6354"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
-<tr class="separator:a70fb7e98972efed5489a92006b4b6354 inherit pro_attribs_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea075942b87c751b84ac96174eff5881 inherit pro_attribs_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="aea075942b87c751b84ac96174eff5881"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
-<tr class="separator:aea075942b87c751b84ac96174eff5881 inherit pro_attribs_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f8e55c87c8f755dbbfd85b4f3421bc"><td class="memItemLeft" align="right" valign="top"><a id="a63f8e55c87c8f755dbbfd85b4f3421bc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>mix</b> ()</td></tr>
+<tr class="separator:a63f8e55c87c8f755dbbfd85b4f3421bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_cell"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_cell')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_cell.html">Cell</a></td></tr>
+<tr class="memitem:aa28cd3093696dee2dd9d3dbb345e97d4 inherit pub_methods_class_cell"><td class="memItemLeft" align="right" valign="top"><a id="aa28cd3093696dee2dd9d3dbb345e97d4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isWalkable</b> () const</td></tr>
+<tr class="separator:aa28cd3093696dee2dd9d3dbb345e97d4 inherit pub_methods_class_cell"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e3cddd7c8f38663693a4e24c0f6d77 inherit pub_methods_class_cell"><td class="memItemLeft" align="right" valign="top"><a id="a85e3cddd7c8f38663693a4e24c0f6d77"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWalkable</b> ()</td></tr>
+<tr class="separator:a85e3cddd7c8f38663693a4e24c0f6d77 inherit pub_methods_class_cell"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_renderable"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_renderable')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_renderable.html">Renderable</a></td></tr>
+<tr class="memitem:a8d14de163e3e6ba3d87fa8a73ad7b063 inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a8d14de163e3e6ba3d87fa8a73ad7b063"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Renderable</b> (int x, int y)</td></tr>
+<tr class="separator:a8d14de163e3e6ba3d87fa8a73ad7b063 inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8517109ed3e4918d7d838e25c660a1 inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a3e8517109ed3e4918d7d838e25c660a1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setX</b> (int x)</td></tr>
+<tr class="separator:a3e8517109ed3e4918d7d838e25c660a1 inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a521de229b0e0d647d7d9196421eaad1a inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a521de229b0e0d647d7d9196421eaad1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (int y)</td></tr>
+<tr class="separator:a521de229b0e0d647d7d9196421eaad1a inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf8b600a2eccd6f21e504d3025ed655c inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="adf8b600a2eccd6f21e504d3025ed655c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> () const</td></tr>
+<tr class="separator:adf8b600a2eccd6f21e504d3025ed655c inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb82850bbd3ed66bba420607794dc78 inherit pub_methods_class_renderable"><td class="memItemLeft" align="right" valign="top"><a id="a7eb82850bbd3ed66bba420607794dc78"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> () const</td></tr>
+<tr class="separator:a7eb82850bbd3ed66bba420607794dc78 inherit pub_methods_class_renderable"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_mixer_8hpp_source.html">Mixer.hpp</a></li>
