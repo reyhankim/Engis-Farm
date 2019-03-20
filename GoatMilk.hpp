@@ -6,9 +6,10 @@
 #define ENGISFARM_GOATMILK_HPP
 
 #include "FarmProduct.hpp"
+#include "Counter.hpp"
 
 // Class GoatMilk adalah FarmProduct dari Goat
-class GoatMilk : public FarmProduct{
+class GoatMilk : public FarmProduct, public Counter<GoatMilk> {
     public:
     //Ctor yang mengatur harga awal
         GoatMilk();

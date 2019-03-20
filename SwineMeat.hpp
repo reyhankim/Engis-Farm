@@ -6,9 +6,10 @@
 #define ENGISFARM_SWINEMEAT_HPP
 
 #include "FarmProduct.hpp"
+#include "Counter.hpp"
 
 // Class SwineMeat adalah FarmProduct dari Swine
-class SwineMeat : public FarmProduct {
+class SwineMeat : public FarmProduct, public Counter<SwineMeat> {
     public:
         //Ctor yang mengatur harga awal
         SwineMeat();

@@ -6,9 +6,10 @@
 #define ENGISFARM_DUCKEGG_HPP
 
 #include "FarmProduct.hpp"
+#include "Counter.hpp"
 
 // Class DuckEgg adalah FarmProduct dari Duck
-class DuckEgg : public FarmProduct {
+class DuckEgg : public FarmProduct, public Counter<DuckEgg> {
     public:
     //Ctor yang mengatur harga awal
         DuckEgg();
