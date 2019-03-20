@@ -7,9 +7,12 @@
 
 #include "Renderable.hpp"
 #include "Product.hpp"
+#include "LinkedList.hpp"
 
 #define NULL nil
 
+// Class player menyimpan data-data seperti gold, currentWater, dan player facing
+// serta memiliki method untuk player berinteraksi dengan farm-nya
 class Player : public Renderable {
     // Data member:
 private:
@@ -20,7 +23,7 @@ private:
 
     int facing; //1 : facing up, 2 : facing down, 3 : facing right, 4 : facing left
 
-    Product** productInventory; // array of pointer to Product
+    LinkedList<Product*> productInventory; // list of pointer to Product
     
 public:
 	//CTOR
@@ -32,37 +35,41 @@ public:
 	//Render
 	char render() const override;
 	
-	//method dasar (lupa namanya)
-	int checkInFront(Product* element);
+	// mengembalikan true jika productInventory kosong / memiliki 0 elemen
 	bool isInventoryEmpty();
+	// menambahkan Product ke inventory
 	void addToInventory(Product* element);
+	// menghapus Product dari inventory
 	void removeFromInventory(Product* element);
+	// mengembalikan objek Renderable yang berada di depan player
+	Renderable* getInFront(LinkedList<Renderable*>);
 	
-    // SELECTORS here
+	// getter
 	int getGold() const;
 	int getFacing() const;
 	int getCurrentWater() const;
 	Product* getProductFromInventory(int index) const;
-	
+	//setter
 	void setGold() const;
 	void setCurrentWater(int water);
 	
-    // METHOD move here
-	// setFacing akan diatur di method move
-    void up();
-    void down();
-    void left();
-    void right();
+    // method untuk mengubah posisi player ke arah tertentu.
+	// player mengubah orientasi tanpa bergerak jika collision dengan
+	// obyek yang tidak dapat dilewati (isWalkable()==false).
+    void move(int direction);
 
-    void talk();			// Marked by Kim: Talk untuk masing-masing hewan kan script-nya beda, apa mending template aja?
+	// menerima objek Renderable, jika merupakan FarmAnimal mencetak hasil dari fungsi sound()
+    void talk(Renderable*);
 
-    void interact();		// Marked by Kim: Interact untuk masing-masing hewan kan beda, apa mending template aja?
+	// menerima objek Renderable dan melakukan interaksi berdasarkan jenis kelas turunannya
+    void interact(Renderable*);
 
-    void kill();			// Marked by Kim: Kill untuk masing-masing hewan menghasilkan product berbeda, apa mending template aja?
+	// menerima objek Renderable, jika merupakan FarmAnimal membunuhnya dengan cara memanggil
+	// dekostruktornya.
+    void kill(Renderable*);			// Marked by Kim: Kill untuk masing-masing hewan menghasilkan product berbeda, apa mending template aja?
 
+	// menyiram (mengurangi air) petak yang ditempati player sehingga tumpuh rumput (grass)
     void grow();
-
-    void emptyBag();
 };
 
 
