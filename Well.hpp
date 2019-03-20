@@ -7,9 +7,10 @@
 
 #include "Facility.hpp"
 
+// Class Truck adalah blueprint dari objek yang digunakan untuk menambah air yang dibawa player
 class Well : public Facility {
 	public :
-		char render() const override;
+		char render() const override;		// Mengembalikan karakter W
 };
 
 

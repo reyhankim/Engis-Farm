@@ -8,6 +8,7 @@
 #include "Product.hpp"
 #include "Facility.hpp"
 
+// Class Truck adalah blueprint dari objek yang digunakan untuk menjual Product
 class Truck : public Facility {
 	public :
 		//CTOR
@@ -17,10 +18,10 @@ class Truck : public Facility {
 		~Truck();
 		
 		//Render
-		char render() const override;
+		char render() const override;			// Mengembalikan karakter T
 		
 		//METHOD
-		void convertToGold(Product product); //proses penjualan
+		void convertToGold(Product product); 	//proses penjualan, menghasilkan gold dengan menjual product yang dipilih
 		
 		//note to developer : convertToGold memiliki Player::setGold()
 };
