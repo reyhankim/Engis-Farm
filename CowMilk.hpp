@@ -6,9 +6,10 @@
 #define ENGISFARM_COWMILK_HPP
 
 #include "FarmProduct.hpp"
+#include "Counter.hpp"
 
 // Class CowMilk adalah FarmProduct dari Cow
-class CowMilk : public FarmProduct{
+class CowMilk : public FarmProduct, public Counter<CowMilk> {
     public:
     //Ctor yang mengatur harga awal
         CowMilk();
