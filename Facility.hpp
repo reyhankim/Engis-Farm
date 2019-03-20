@@ -10,6 +10,8 @@
 
 // Class Land adalah blueprint dari objek turunan "Cell" yang tidak dapat ditempati oleh Animal atau Player
 class Facility : public Renderable {
+public:
+    Facility();         // Ctor: assign walkable menjadi False
 };
 
 

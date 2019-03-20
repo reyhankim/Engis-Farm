@@ -12,7 +12,7 @@ class Cell : public Renderable {
     private:
         bool walkable;				// Boolean walkable = true untuk objek yang dapat ditempati oleh Player atau Animal
     public:
-        Cell();                    // Initialize walkable
+        Cell();                    // Initialize walkable menjadi True
         // getter untuk walkable
 		bool isWalkable() const;
 		void setWalkable();        // setter untuk walkable
