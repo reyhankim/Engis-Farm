@@ -8,19 +8,20 @@
 
 #include "Cell.hpp"
 
+// Class Land adalah blueprint dari objek turunan "Cell" yang dapat ditempati oleh Animal atau Player
 class Land : public Cell {
 	protected :
-		bool grassed;
+		bool grassed;           // Menyimpan boolean untuk mengetahui Land tersebut ditumbuhi rumput atau tidak
 		// menentukan secara acak apakah Land akan berrumput (dipanggil oleh CTOR)
 		void randomGrass();
 	
 	public :
-		//CTOR
+		//CTOR : Memaanggil randomGrassed()
 		Land();
 		
 		//SELECTOR
-		void setGrass(bool input);
-		bool getGrass() const;
+		void setGrass(bool input);      // setter boolean grassed
+		bool getGrass() const;          // getter boolean grassed
 };
 
 

@@ -10,10 +10,12 @@
 // Untuk pengelompokan kelas dan akan diinherit oleh Land dan Facilities
 class Cell : public Renderable {
     private:
-        bool walkable;
+        bool walkable;				// Boolean walkable = true untuk objek yang dapat ditempati oleh Player atau Animal
     public:
+        Cell();                    // Initialize walkable
         // getter untuk walkable
-		bool isWalkable();
+		bool isWalkable() const;
+		void setWalkable();        // setter untuk walkable
 };
 
 

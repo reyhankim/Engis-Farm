@@ -8,9 +8,10 @@
 
 #include "Land.hpp"
 
+// Class Grassland adalah blueprint dari objek turunan "Land" khusus MilkProducingFarmAnimal
 class Grassland : public Land {
 public:
-    char render() const override;
+    char render() const override;       // Mengembalikan karakter -
 };
 
 

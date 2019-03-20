@@ -11,6 +11,7 @@
 #include "FarmProduct.hpp"
 #include "Facility.hpp"
 
+// Class Mixer adalah blueprint dari objek turunan "Facility" yang dapat menghasilkan SideProduct dari gabungan FarmProduct
 class Mixer : public Facility {
 	private :
 		Product **listSideProduct;
@@ -28,7 +29,7 @@ class Mixer : public Facility {
 		char render() const override;
 		
 		//METHOD
-		SideProduct mix(FarmProduct farmProduct1, FarmProduct farmProduct2);
+		void mix();
 };
 
 
