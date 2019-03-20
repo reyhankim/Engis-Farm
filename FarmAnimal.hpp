@@ -8,6 +8,7 @@
 #include <string>
 #include "Renderable.hpp"
 #include "Product.hpp"
+#include "LinkedList.hpp"
 
 using namespace std;
 
@@ -32,8 +33,9 @@ class FarmAnimal : public Renderable {
         // method untuk mengurangi nilai hungryLevel animal
         void eat();
 
-        // method untuk pergerakan animal
-        void autoMove();
+        // method pure virtual untuk pergerakan animal
+        // menerima List of Renderable* untuk mengecek cell yang akan ditempati
+        virtual void autoMove(LinkedList<Renderable*> farmMap) = 0;
 
         // virtual method untuk mendapatkan suara hewan
         virtual string sound() const = 0;
