@@ -16,7 +16,7 @@ class Renderable {
 		int getX() const;                      // getter X
 		int getY() const;                      // getter Y
 	
-	private :
+	protected :
 		int x;			// posisi secara horizontal
 		int y;			// posisi secara vertikal
 };
