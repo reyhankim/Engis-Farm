@@ -4,6 +4,12 @@
 
 using namespace std;
 
+FarmAnimal::FarmAnimal(){
+    this->name = "noname";
+    this->interactable = true;
+    this->hungryLevel = this->hungryStart;
+}
+
 FarmAnimal::FarmAnimal(string name, bool _interactable){
     this->name = name;
     this->interactable = _interactable;
