@@ -16,7 +16,7 @@
 class Player : public Renderable {
     // Data member:
 private:
-    const int maxWater; //kapasitas maksimum air yang dapat dibawa
+    const int maxWater = 5; //kapasitas maksimum air yang dapat dibawa
 
     int gold; //uang yang dimiliki player
     int currentWater;
@@ -50,7 +50,7 @@ public:
 	int getCurrentWater() const;
 	Product* getProductFromInventory(int index) const;
 	//setter
-	void setGold() const;
+	void setGold();
 	void setCurrentWater(int water);
 	
     // method untuk mengubah posisi player ke arah tertentu.
