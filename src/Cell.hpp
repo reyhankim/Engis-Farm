@@ -15,7 +15,7 @@ class Cell : public Renderable {
         Cell();                    // Initialize walkable menjadi True
         // getter untuk walkable
 		bool isWalkable() const;
-		void setWalkable();        // setter untuk walkable
+		void setWalkable(bool input);        // setter untuk walkable
 };
 
 
