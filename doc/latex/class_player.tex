@@ -1,0 +1,64 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_a6daa4259fd7a2b382801f5e33e81960b}\label{class_player_a6daa4259fd7a2b382801f5e33e81960b}} 
+char {\bfseries render} () const override
+\item 
+\mbox{\Hypertarget{class_player_ab3c93d041cfa17ac2a10239979d9b1ca}\label{class_player_ab3c93d041cfa17ac2a10239979d9b1ca}} 
+bool {\bfseries is\+Inventory\+Empty} ()
+\item 
+\mbox{\Hypertarget{class_player_a4705a0783e10c3ca0e5d3c11e3d93f36}\label{class_player_a4705a0783e10c3ca0e5d3c11e3d93f36}} 
+void {\bfseries add\+To\+Inventory} (\mbox{\hyperlink{class_product}{Product}} $\ast$element)
+\item 
+\mbox{\Hypertarget{class_player_a3244e8bdef443ebe88449b756df14bfe}\label{class_player_a3244e8bdef443ebe88449b756df14bfe}} 
+void {\bfseries remove\+From\+Inventory} (\mbox{\hyperlink{class_product}{Product}} $\ast$element)
+\item 
+\mbox{\Hypertarget{class_player_afd247cafe55af73b244129fd5ffe2220}\label{class_player_afd247cafe55af73b244129fd5ffe2220}} 
+\mbox{\hyperlink{class_renderable}{Renderable}} $\ast$ {\bfseries get\+In\+Front} (\mbox{\hyperlink{class_linked_list}{Linked\+List}}$<$ \mbox{\hyperlink{class_renderable}{Renderable}} $\ast$ $>$)
+\item 
+\mbox{\Hypertarget{class_player_af8eaab3b610debd175d424823e4af144}\label{class_player_af8eaab3b610debd175d424823e4af144}} 
+int {\bfseries get\+Gold} () const
+\item 
+\mbox{\Hypertarget{class_player_ac72a41034f2f445de714af0adf6f258b}\label{class_player_ac72a41034f2f445de714af0adf6f258b}} 
+int {\bfseries get\+Facing} () const
+\item 
+\mbox{\Hypertarget{class_player_a8cc8f60daa06748d93b403b93e887082}\label{class_player_a8cc8f60daa06748d93b403b93e887082}} 
+int {\bfseries get\+Current\+Water} () const
+\item 
+\mbox{\Hypertarget{class_player_a19bcee8132343b53a96872e6859747c0}\label{class_player_a19bcee8132343b53a96872e6859747c0}} 
+\mbox{\hyperlink{class_product}{Product}} $\ast$ {\bfseries get\+Product\+From\+Inventory} (int index) const
+\item 
+\mbox{\Hypertarget{class_player_a56ef7ff2a7c93abce4ccc651c415ded8}\label{class_player_a56ef7ff2a7c93abce4ccc651c415ded8}} 
+void {\bfseries set\+Gold} () const
+\item 
+\mbox{\Hypertarget{class_player_a3f2c01ca65976b3a3304dfcc4fcd8e87}\label{class_player_a3f2c01ca65976b3a3304dfcc4fcd8e87}} 
+void {\bfseries set\+Current\+Water} (int water)
+\item 
+\mbox{\Hypertarget{class_player_a8e6ae2e7828c05c2125ab0c573b55d83}\label{class_player_a8e6ae2e7828c05c2125ab0c573b55d83}} 
+void {\bfseries move} (int direction)
+\item 
+\mbox{\Hypertarget{class_player_a72c0adada0d16555ec66923a8f7a9883}\label{class_player_a72c0adada0d16555ec66923a8f7a9883}} 
+void {\bfseries talk} (\mbox{\hyperlink{class_renderable}{Renderable}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_player_a230fac341c65750c25adcf4060495a8d}\label{class_player_a230fac341c65750c25adcf4060495a8d}} 
+void {\bfseries interact} (\mbox{\hyperlink{class_renderable}{Renderable}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_player_a7436fd0bdfd9e4642efac1b33a0052d9}\label{class_player_a7436fd0bdfd9e4642efac1b33a0052d9}} 
+void {\bfseries kill} (\mbox{\hyperlink{class_renderable}{Renderable}} $\ast$)
+\item 
+\mbox{\Hypertarget{class_player_a88055637b6065fc4294ad555ebb3071b}\label{class_player_a88055637b6065fc4294ad555ebb3071b}} 
+void {\bfseries grow} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Player.\+hpp\end{DoxyCompactItemize}
