@@ -10,6 +10,10 @@
 
 // Class SideProduct adalah blueprint dari Product yang dihasilkan dari gabungan FarmProduct
 class SideProduct : public Product {
+
+public:
+    //Ctor
+    SideProduct();
 };
 
 
