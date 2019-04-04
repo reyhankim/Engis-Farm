@@ -16,13 +16,10 @@ using namespace std;
 // dan menjadi dasar pembentukan class animal lainnya.
 class FarmAnimal : public Renderable {
     
-    private :
+    private:
         const int hungryStart = 0;
-    
-    protected:
         bool interactable;
         int hungryLevel;
-        string name;
 
     public:
         //CTOR Default
@@ -31,17 +28,13 @@ class FarmAnimal : public Renderable {
         // CTOR User defined
         FarmAnimal(string name, bool _interactable);
 
-        // DTOR
-        ~FarmAnimal();
-
         // getter
         bool isInteractable() const;
         int getHungryLevel() const;
-        string getName() const;
 
         // setter
-        void setHungryLevel();
-        void setName(string name);
+        void setHungryLevel(int _hungryLevel);
+        void setInteractable(bool _interactable);
 
         // method untuk mengurangi nilai hungryLevel animal
         void eat();
@@ -54,7 +47,11 @@ class FarmAnimal : public Renderable {
         virtual string sound() const = 0;
 
         // virtual method untuk mengembalikan FarmProduct yang dihasilkan suatu hewan
-        virtual Product* getProduct() const = 0;
+        // jika diajakberinteraksi 
+        virtual Product* getProductInteracted() const = 0;
+
+        // virtual method mengembalikan FarmProduct yang dihasilkan jika hewan dibunuh
+        virtual Product* getProductKilled() const = 0;
 };
 
 
