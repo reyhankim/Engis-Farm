@@ -9,12 +9,14 @@
 #include "Renderable.hpp"
 #include "Product.hpp"
 #include "LinkedList.hpp"
+#include "Counter.hpp"
 
 using namespace std;
 
 // Class FarmAnimal adalah abstract base class yang memiliki method animal dasar
 // dan menjadi dasar pembentukan class animal lainnya.
-class FarmAnimal : public Renderable {
+// TAMBAHAN : Counter pada FarmAnimal untuk menghitung jumlah animal yang masih hidup
+class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
     
     private:
         const int hungryStart = 0;
