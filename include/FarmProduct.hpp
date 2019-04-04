@@ -13,6 +13,9 @@ class FarmProduct : public Product {
     public:
         //Ctor
         FarmProduct();
+
+        // Virtual DTOR
+        virtual ~FarmProduct();
 };
 
 

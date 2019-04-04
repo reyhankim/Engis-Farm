@@ -14,6 +14,8 @@ FarmAnimal::FarmAnimal(string name, bool _interactable){
     this->hungryLevel = this->hungryStart;
 }
 
+FarmAnimal::~FarmAnimal() {}
+
 bool FarmAnimal::isInteractable() const{
     return this->interactable;
 }

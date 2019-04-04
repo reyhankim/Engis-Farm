@@ -6,3 +6,5 @@ using namespace std;
 Facility::Facility() : Cell(){
     this->walkable = false;
 }
+
+Facility::~Facility() {}

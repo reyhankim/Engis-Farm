@@ -12,6 +12,7 @@ private:
     int harga;              // Menyimpan harga dari Product
 
 public:
+    virtual ~Product();     // virtual DTOR
     int getHarga() const;   // Getter harga
     void setHarga();        // Setter harga
 };

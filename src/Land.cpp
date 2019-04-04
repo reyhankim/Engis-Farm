@@ -8,6 +8,8 @@ Land::Land() : Cell(){
     randomGrass();
 }
 
+Land::~Land() {}
+
 void Land::randomGrass(){
     if(rand() % 100 < Land::chanceGrassed){
         setGrass(true);

@@ -3,9 +3,9 @@
 
 // Class FarmProduct adalah Product yang dihasilkan oleh FarmAnimal
 
-        //Ctor
-        FarmProduct::FarmProduct(){
-                Product::setHarga();
-        }
+//Ctor
+FarmProduct::FarmProduct(){
+        Product::setHarga();
+}
 
-
+FarmProduct::~FarmProduct() {}

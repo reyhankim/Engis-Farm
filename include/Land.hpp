@@ -19,6 +19,8 @@ class Land : public Cell {
 	public :
 		//CTOR : Memaanggil randomGrassed()
 		Land();
+		// virtual DTOR
+		virtual ~Land();
 		
 		//SELECTOR
 		void setGrass(bool input);      // setter boolean grassed

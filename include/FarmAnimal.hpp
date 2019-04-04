@@ -30,6 +30,9 @@ class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
         // CTOR User defined
         FarmAnimal(string name, bool _interactable);
 
+        // DTOR Virtual
+        virtual ~FarmAnimal();
+
         // getter
         bool isInteractable() const;
         int getHungryLevel() const;
