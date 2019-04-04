@@ -9,6 +9,7 @@ using namespace std;
 // Class LinkedList adalah blueprint dari objek yang dapat menampung data dengan representasi LinkedList
 template <class T>
 class LinkedList{
+
 	private:
     	class Node {
     		public:
