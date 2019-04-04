@@ -5,9 +5,14 @@ class Counter
 
     public:
         // CTOR
-        Counter();
+        Counter(){
+            objects_created++;
+            objects_alive++;
+        }
         // DTOR
-        virtual ~Counter();
+        virtual ~Counter() {
+            --objects_alive;
+        }
 
     static int objects_alive;
     // atribut yang mencatat obyek yang telah diinstansiasi
