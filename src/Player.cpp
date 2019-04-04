@@ -4,16 +4,13 @@
 
 using namespace std;
 
-Player::Player(){
+Player::Player() : Renderable(){
     this->gold = 0;
     this->currentWater = this->maxWater;
     this->facing = 1;
-
-    this->productInventory = new LinkedList<Product*>();
 }
 
 Player::~Player(){
-    delete productInventory;
 }
 
 char Player::render() const {
@@ -37,12 +34,12 @@ bool Player::isInventoryEmpty(){
     return productInventory.isEmpty();
 }
 
-void Player::addToInventory(Product* element){
+void Player::addToInventory(Product element){
     productInventory.add(element);
 }
 
-void Player::removeInventory(Product* element){
-    productInvetory.remove(element);
+void Player::removeFromInventory(Product element){
+    productInventory.remove(element);
 }
 
 Renderable* Player::getInFront(LinkedList<Renderable*> listrender){
@@ -60,7 +57,7 @@ int Player::getCurrentWater() const{
     return this->currentWater;
 }
 
-Product* Player::getProductFromInventory(int index) const{
+Product Player::getProductFromInventory(int index){
     return productInventory.get(index);
 }
 
@@ -75,20 +72,20 @@ void Player::setCurrentWater(int water){
     }
 }
 
-void move(int direction){
+void Player::move(int direction){
     facing = direction;
 
     if(facing == 1){
         try{
-            if(this->getY - 1 < 0){
+            if(getY() - 1 < 0){
                 throw "Di luar batas permainan";
             }
             
-            if(! getInFront(listrender).isWalkable()){
-                throw "Tidak bisa diakses";
-            }
+            //if(! getInFront(listrender).isWalkable()){
+                //throw "Tidak bisa diakses";
+            //}
             
-            setY(getY - 1);
+            setY(getY() - 1);
         }
         catch(const char* e){
             cout << e << endl;
