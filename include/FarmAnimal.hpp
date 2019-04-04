@@ -18,13 +18,10 @@ using namespace std;
 // TAMBAHAN : Counter pada FarmAnimal untuk menghitung jumlah animal yang masih hidup
 class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
     
-    private :
+    private:
         const int hungryStart = 0;
-    
-    protected:
         bool interactable;
         int hungryLevel;
-        string name;
 
     public:
         //CTOR Default
@@ -33,17 +30,13 @@ class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
         // CTOR User defined
         FarmAnimal(string name, bool _interactable);
 
-        // DTOR
-        ~FarmAnimal();
-
         // getter
         bool isInteractable() const;
         int getHungryLevel() const;
-        string getName() const;
 
         // setter
-        void setHungryLevel();
-        void setName(string name);
+        void setHungryLevel(int _hungryLevel);
+        void setInteractable(bool _interactable);
 
         // method untuk mengurangi nilai hungryLevel animal
         void eat();
@@ -56,7 +49,11 @@ class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
         virtual string sound() const = 0;
 
         // virtual method untuk mengembalikan FarmProduct yang dihasilkan suatu hewan
-        virtual Product* getProduct() const = 0;
+        // jika diajakberinteraksi 
+        virtual Product* getProductInteracted() const = 0;
+
+        // virtual method mengembalikan FarmProduct yang dihasilkan jika hewan dibunuh
+        virtual Product* getProductKilled() const = 0;
 };
 
 

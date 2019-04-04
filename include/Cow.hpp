@@ -18,7 +18,10 @@ class Cow : public MeatProducingFarmAnimal, public MilkProducingFarmAnimal {
         string sound() const override;
 
         // mengembalikan FarmProduct yang behubungan dengan sapi
-        Product* getProduct() const override;
+        Product* getProductInteracted() const override;
+
+        // mengembalikan FarmProduct yang dihasilkan jika hewan dibunuh
+        Product* getProductKilled() const override;
 };
 
 
