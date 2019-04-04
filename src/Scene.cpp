@@ -70,3 +70,22 @@ void Scene::drawScene() {
         cout << endl;
     }
 }
+
+void Scene::UpdateFarmMap() {
+    // Step 0: Pengecekan terhadap FarmAnimal yang memiliki hungerLevel == 5
+    for(int i = 0; i < Counter<FarmAnimal>::objects_alive; i++) {
+        if(this->animals.get(i)->getHungryLevel() >= 5) {
+            // this->animals.get(i); /
+        }
+    }
+
+    // Step 1: Memanggil render() untuk mendapatkan posisi CELLS dari Farm sekarang
+    for(int i = 0; i < this->farmMapHeight*this->farmMapWidth; i++) {
+        this->farmMap[this->field.get(i)->getX()][this->field.get(i)->getY()] = this->field.get(i)->render();
+    }
+    // Step 2: Memanggil render() untuk mendapatkan posisi ANIMALS dari Farm sekarang
+    for(int i = 0; i < Counter<FarmAnimal>::objects_alive; i++) {
+        this->farmMap[this->animals.get(i)->getX()][this->animals.get(i)->getY()] = this->animals.get(i)->render();
+    }
+    // Step 3: Memanggil
+}
