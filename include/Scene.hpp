@@ -43,10 +43,3 @@ class Scene {
         Scene(Scene &oldScene);
         // DTOR
         ~Scene();
-
-        // menampilkan jendela permainan di konsol
-        void DrawScene();
-};
-
-
-#endif //ENGISFARM_FARM_HPP
