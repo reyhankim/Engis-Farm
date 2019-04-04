@@ -6,7 +6,7 @@
 #define ENGISFARM_FACILITY_HPP
 
 
-#include "include/Cell.hpp"
+#include "Cell.hpp"
 
 // Class Land adalah blueprint dari objek turunan "Cell" yang tidak dapat ditempati oleh Animal atau Player
 class Facility : public Cell {
