@@ -20,10 +20,10 @@ private:
     int currentWater;
 
     int facing; //1 : facing up, 2 : facing down, 3 : facing right, 4 : facing left
-
-    LinkedList<Product*> productInventory; // list of pointer to Product
+	LinkedList<Product> productInventory = LinkedList<Product>();  // list of pointer to Product
     
 public:
+	
 	//CTOR
 	Player();
 	
@@ -46,9 +46,9 @@ public:
 	int getGold() const;
 	int getFacing() const;
 	int getCurrentWater() const;
-	Product* getProductFromInventory(int index) const;
+	Product getProductFromInventory(int index);
 	//setter
-	void setGold();
+	void setGold(int amount);
 	void setCurrentWater(int water);
 	
     // method untuk mengubah posisi player ke arah tertentu.
