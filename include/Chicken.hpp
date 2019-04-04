@@ -18,7 +18,10 @@ class Chicken : public EggProducingFarmAnimal, public MeatProducingFarmAnimal {
         string sound() const override;
 
         // mengembalikan FarmProduct yang behubungan dengan ayam
-        Product* getProduct() const override;
+        Product* getProductInteracted() const override;
+
+        // mengembalikan FarmProduct yang dihasilkan jika hewan dibunuh
+        Product* getProductKilled() const override;
 };
 
 #endif //ENGISFARM_CHICKEN_HPP

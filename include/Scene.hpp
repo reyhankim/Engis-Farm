@@ -10,44 +10,45 @@
 #include "FarmAnimal.hpp"
 #include "Player.hpp"
 #include <string>
-
 using namespace std;
 
 // Kelas Scene adalah blueprint dari objek yang menampung koleksi objek pada game serta melakukan update terhadap peta pada Farm
 class Scene {
-    private:
-        const int DEFAULT_FARM_MAP_HEIGHT;      // Tinggi peta farm default
-        const int DEFAULT_FARM_MAP_WIDTH;       // Lebar peta farm default
+private:
+    const int DEFAULT_FARM_MAP_HEIGHT;      // Tinggi peta farm default
+    const int DEFAULT_FARM_MAP_WIDTH;       // Lebar peta farm default
 
-        string sessionName;                     // nama pemain
+    string sessionName;                     // nama pemain
 
-        LinkedList<Cell*> field;                // LinkedList yang menyimpan koleksi Cell
-        LinkedList<FarmAnimal*> animals;        // LinkedList yang menyimpan koleksi Animal
-        
-        Player player;                          // Instansiasi player
-        
-        char** farmMap;                         // Kumpulan hasil render karakter dari objek-objek pada farm
-        int farmMapHeight;                      // Tinggi peta farm
-        int farmMapWidth;                       // Lebar peta farm
+    LinkedList<Cell *> field;                // LinkedList yang menyimpan koleksi Cell
+    LinkedList<FarmAnimal *> animals;        // LinkedList yang menyimpan koleksi Animal
 
-        // Memanggil method render setiap objek dalam Fields dan menyimpannya
-        // dalam Canvas, kemudian melakukan hal yang sama dengan Animals dan
-        // terakhir player.
-        void UpdateFarmMap();
+    Player player;                          // Instansiasi player
 
-    public:
-        // CTOR
-        Scene();
-        // CTOR user defined
-        Scene(string _sessionName, int _farmMapHeight, int _farmMapWidth);
-        // CCTOR
-        Scene(Scene &oldScene);
-        // DTOR
-        ~Scene();
-        
-        // menampilkan jendela permainan di konsol
-        void DrawScene();
+    char **farmMap;                         // Kumpulan hasil render karakter dari objek-objek pada farm
+    int farmMapHeight;                      // Tinggi peta farm
+    int farmMapWidth;                       // Lebar peta farm
+
+    // Memanggil method render setiap objek dalam Fields dan menyimpannya
+    // dalam Canvas, kemudian melakukan hal yang sama dengan Animals dan
+    // terakhir player.
+    void UpdateFarmMap();
+
+public:
+    // CTOR
+    Scene();
+
+    // CTOR user defined
+    Scene(string _sessionName, int _farmMapHeight, int _farmMapWidth);
+
+    // CCTOR
+    Scene(Scene &oldScene);
+
+    // DTOR
+    ~Scene();
+
+    // menampilkan jendela permainan di konsol
+    void drawScene();
 };
 
-
-#endif //ENGISFARM_FARM_HPP
+#endif

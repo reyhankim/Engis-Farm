@@ -1,7 +1,5 @@
 #include <iostream>
-
 #include "../include/Player.hpp"
-
 using namespace std;
 
 Player::Player() : Renderable(){
@@ -11,22 +9,19 @@ Player::Player() : Renderable(){
 }
 
 Player::~Player(){
+    delete &productInventory;
 }
 
 char Player::render() const {
     switch(facing){
         case 1 :
             return '^';
-            break;
         case 2 :
             return 'V';
-            break;
         case 3 :
             return '>';
-            break;
         case 4 :
             return '<';
-            break;
     }
 }
 
@@ -42,7 +37,7 @@ void Player::removeFromInventory(Product element){
     productInventory.remove(element);
 }
 
-Renderable* Player::getInFront(LinkedList<Renderable*> listrender){
+Renderable* Player::getInFront(){
     //butuh implementasi lebih lanjut
 }
 
@@ -93,15 +88,15 @@ void Player::move(int direction){
     }
     else if(facing == 2){
         try{
-            if(this->getY + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
+            if(this->getY() + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
             }
             
-            if(! getInFront(listrender).isWalkable()){
+            if(!getInFront()->isWalkable()){
                 throw "Tidak bisa diakses";
             }
 
-            setY(getY + 1);
+            setY(getY() + 1);
         }
         catch(const char* e){
             cout << e << endl;
@@ -109,7 +104,7 @@ void Player::move(int direction){
     }
     else if(facing == 3){
         try{
-            if(this->getX + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
+            if(this->getX() + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
             }
             
@@ -117,7 +112,7 @@ void Player::move(int direction){
                 throw "Tidak bisa diakses";
             }
 
-            setY(getX + 1);
+            setY(getX() + 1);
         }
         catch(const char* e){
             cout << e << endl;
@@ -125,7 +120,7 @@ void Player::move(int direction){
     }
     else if(facing == 4){
         try{
-            if(this->getX - 1 < 0){ //catatan untuk developer (ubah 8 dengan batas maksimum)
+            if(this->getX() - 1 < 0){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
             }
             
@@ -133,7 +128,7 @@ void Player::move(int direction){
                 throw "Tidak bisa diakses";
             }
 
-            setY(getX - 1);
+            setY(getX() - 1);
         }
         catch(const char* e){
             cout << e << endl;
