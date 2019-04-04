@@ -10,7 +10,6 @@
 #include "FarmAnimal.hpp"
 #include "Player.hpp"
 #include <string>
-
 using namespace std;
 
 // Kelas Scene adalah blueprint dari objek yang menampung koleksi objek pada game serta melakukan update terhadap peta pada Farm
@@ -23,10 +22,10 @@ class Scene {
 
         LinkedList<Cell*> field;                // LinkedList yang menyimpan koleksi Cell
         LinkedList<FarmAnimal*> animals;        // LinkedList yang menyimpan koleksi Animal
-        
+
         Player player;                          // Instansiasi player
-        
-        char** farmMap;                         // Kumpulan hasil render karakter dari objek-objek pada farm
+
+        char **farmMap;                         // Kumpulan hasil render karakter dari objek-objek pada farm
         int farmMapHeight;                      // Tinggi peta farm
         int farmMapWidth;                       // Lebar peta farm
 
@@ -44,7 +43,7 @@ class Scene {
         Scene(Scene &oldScene);
         // DTOR
         ~Scene();
-        
+
         // menampilkan jendela permainan di konsol
         void DrawScene();
 };

@@ -7,7 +7,7 @@ using namespace std;
 template <class T>
 class LinkedList{
 	private :
-		struct Node{
+    struct Node{
 			T info;					// Menampung informasi yang disimpan pada LinkedList
 			Node *next, *prev;		// Pointer
 		};
@@ -22,7 +22,7 @@ class LinkedList{
 		void add(T element);		// Menambahkan elemen sebagai elemen paling akhir
 		void remove(T element);		// Membuang elemen dari linked list
 		T get(int index);			// Mengembalikan elemen pada indeks
-		
+
 };
 
 #endif
