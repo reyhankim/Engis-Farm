@@ -1,6 +1,6 @@
 #include <iostream>
-#include "../Include/Scene.hpp"
-#include "../Include/Player.hpp"
+#include "../include/Scene.hpp"
+#include "../include/Player.hpp"
 
 using namespace std;
 
