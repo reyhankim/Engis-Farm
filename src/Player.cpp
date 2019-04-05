@@ -64,14 +64,23 @@ Renderable* Player::getInFront(LinkedList<Cell *> field, LinkedList<FarmAnimal *
         yFront = this->getY();
     }
 
-    int i = 0;
-    while ((field.get(i)->getX() != xFront && field.get(i)->getY() != yFront) || i < mapHeight*mapWidth) {
-        if (Facility* f = dynamic_cast<Facility*>(field.get(i))) {
-            renderableAddress = field.get(i);
+    int i = 0; int found = 0;
+    while (i < mapHeight*mapWidth && found == 0) {
+        if (field.get(i)->getX() == xFront && field.get(i)->getY() == yFront) {
+            if (Facility *f = dynamic_cast<Facility *>(field.get(i))) {
+                renderableAddress = field.get(i);
+            }
+            found = 1;
         }
+        i++;
     }
-    while ((animals.get(i)->getX() != xFront && animals.get(i)->getY() != yFront) || i < Counter<FarmAnimal>::objects_alive) {
-        renderableAddress = animals.get(i);
+    i = 0; found = 0;
+    while (i < Counter<FarmAnimal>::objects_alive && found == 0) {
+        if (animals.get(i)->getX() == xFront && animals.get(i)->getY() == yFront) {
+            renderableAddress = animals.get(i);
+            found = 1;
+        }
+        i++;
     }
     return renderableAddress;
 }

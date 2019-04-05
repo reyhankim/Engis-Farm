@@ -6,16 +6,16 @@
 #define ENGISFARM_EGGPRODUCINGFARMANIMAL_HPP
 
 #include "FarmAnimal.hpp"
+#include "Scene.hpp"
 
 // Class EggProducingFarmAnimal digunakan untuk mengelompokkan animal
-class EggProducingFarmAnimal : virtual public FarmAnimal {
+class EggProducingFarmAnimal : public FarmAnimal {
     public:
-        EggProducingFarmAnimal();
         // DTOR Virtual
         virtual ~EggProducingFarmAnimal();
         // method untuk pergerakan animal, hanya dapat bergerak di Coop
         // menerima List of Renderable* untuk mengecek cell yang akan ditempati
-        void autoMove();
+        void autoMove(Scene* s) override;
 };
 
 

@@ -45,7 +45,7 @@ class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
         void eat();
 
         // method pure virtual untuk pergerakan animal
-        virtual void autoMove() = 0;
+        virtual void autoMove(Scene s) = 0;
 
         // virtual method untuk mendapatkan suara hewan
         virtual string sound() const = 0;

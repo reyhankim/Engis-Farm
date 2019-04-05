@@ -6,16 +6,16 @@
 #define ENGISFARM_MEATPRODUCINGFARMANIMAL_HPP
 
 #include "FarmAnimal.hpp"
+#include "Scene.hpp"
 
 // Class MeatProducingFarmAnimal digunakan untuk mengelompokkan animal
-class MeatProducingFarmAnimal : virtual public FarmAnimal {
+class MeatProducingFarmAnimal : public FarmAnimal {
     public:
-        MeatProducingFarmAnimal();
         // DTOR Virtual
         virtual ~MeatProducingFarmAnimal();
         // method untuk pergerakan animal, hanya dapat bergerak di Barn
         // menerima List of Renderable* untuk mengecek cell yang akan ditempati
-        void autoMove(LinkedList<Renderable*> farmMap);
+        void autoMove(Scene* s) override;
 };
 
 
