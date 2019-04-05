@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include "../include/Scene.hpp"
+#include "../include/Land.hpp"
+
 using namespace std;
 
 Scene::Scene() : DEFAULT_FARM_MAP_HEIGHT(15), DEFAULT_FARM_MAP_WIDTH(15) {
@@ -60,6 +62,7 @@ Scene::~Scene() {
     delete &this->field;
     delete &this->animals;
     delete &this->farmMap;
+    cout << "G a m e  O v e r !" << endl;
 }
 
 void Scene::drawScene() {
@@ -72,20 +75,27 @@ void Scene::drawScene() {
 }
 
 void Scene::UpdateFarmMap() {
+    int i;
     // Step 0: Pengecekan terhadap FarmAnimal yang memiliki hungerLevel == 5
-    for(int i = 0; i < Counter<FarmAnimal>::objects_alive; i++) {
+    for(i = 0; i < Counter<FarmAnimal>::objects_alive; i++) {
         if(this->animals.get(i)->getHungryLevel() >= 5) {
-            // this->animals.get(i); /
+            FarmAnimal *temp = this->animals.get(i);
+            this->animals.remove(this->animals.get(i)); // Delete object
+            temp->~FarmAnimal();
         }
     }
 
-    // Step 1: Memanggil render() untuk mendapatkan posisi CELLS dari Farm sekarang
-    for(int i = 0; i < this->farmMapHeight*this->farmMapWidth; i++) {
+    // Step 1: Memanggil render() untuk mendapatkan posisi CELLS dari Farm sekarang dan randGrassGrow()
+    for(i = 0; i < this->farmMapHeight*this->farmMapWidth; i++) {
+        if (Land* l = dynamic_cast<Land*>(this->field.get(i))) {
+            this->field.get(i)->randomGrass();
+        }
         this->farmMap[this->field.get(i)->getX()][this->field.get(i)->getY()] = this->field.get(i)->render();
     }
     // Step 2: Memanggil render() untuk mendapatkan posisi ANIMALS dari Farm sekarang
-    for(int i = 0; i < Counter<FarmAnimal>::objects_alive; i++) {
+
+    for(i = 0; i < Counter<FarmAnimal>::objects_alive; i++) {
+        this->animals.get(i)->autoMove();
         this->farmMap[this->animals.get(i)->getX()][this->animals.get(i)->getY()] = this->animals.get(i)->render();
     }
-    // Step 3: Memanggil
 }
