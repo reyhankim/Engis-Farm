@@ -1,6 +1,8 @@
 #include <iostream>
 #include "../include/Player.hpp"
 #include "../include/LeafInclude.hpp"
+#include "../include/Land.hpp"
+
 using namespace std;
 
 Player::Player() : Renderable(){

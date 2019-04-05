@@ -14,7 +14,7 @@ class MeatProducingFarmAnimal : public FarmAnimal {
         virtual ~MeatProducingFarmAnimal();
         // method untuk pergerakan animal, hanya dapat bergerak di Barn
         // menerima List of Renderable* untuk mengecek cell yang akan ditempati
-        void autoMove(LinkedList<Renderable*> farmMap) override;
+        void autoMove() override;
 };
 
 
