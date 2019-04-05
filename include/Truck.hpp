@@ -21,7 +21,7 @@ class Truck : public Facility {
 		char render() const override;			// Mengembalikan karakter T
 		
 		//METHOD
-		void convertToGold(Product product); 	//proses penjualan, menghasilkan gold dengan menjual product yang dipilih
+		int convertToGold(Product* product); 	//proses penjualan, menghasilkan gold dengan menjual product yang dipilih
 		
 		//note to developer : convertToGold memiliki Player::setGold()
 };

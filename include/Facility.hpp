@@ -5,11 +5,13 @@
 #ifndef ENGISFARM_FACILITY_HPP
 #define ENGISFARM_FACILITY_HPP
 
+
 #include "Cell.hpp"
 
 // Class Land adalah blueprint dari objek turunan "Cell" yang tidak dapat ditempati oleh Animal atau Player
 class Facility : public Cell {
 public:
+    virtual ~Facility(); // virtual DTOR
     Facility();         // Ctor: assign walkable menjadi False
 };
 

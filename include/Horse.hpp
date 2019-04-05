@@ -17,7 +17,10 @@ class Horse : public MeatProducingFarmAnimal {
         string sound() const override;
 
         // mengembalikan FarmProduct yang behubungan dengan kuda
-        Product* getProduct() const override;
+        Product* getProductInteracted() const override;
+
+        // mengembalikan FarmProduct yang dihasilkan jika hewan dibunuh
+        Product* getProductKilled() const override;
 };
 
 

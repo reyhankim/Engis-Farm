@@ -14,6 +14,8 @@ class SideProduct : public Product {
 public:
     //Ctor
     SideProduct();
+    // virtual DTOR
+    virtual ~SideProduct();
 };
 
 

@@ -6,6 +6,7 @@
 #include "../include/Product.hpp"
 
 // Class Product adalah blueprint dari seluruh produk yang dapat disimpan dan dijual
+    Product::~Product() {}
 
     int Product::getHarga() const{
         return harga;

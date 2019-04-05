@@ -13,6 +13,8 @@ Renderable::Renderable(int x, int y){
     this->y = y;
 }
 
+Renderable::~Renderable() {}
+
 void Renderable::setX(int x){
     this->x = x;
 }

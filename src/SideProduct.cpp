@@ -7,3 +7,5 @@
 SideProduct::SideProduct(){
     Product::setHarga();
 }
+
+SideProduct::~SideProduct() {}

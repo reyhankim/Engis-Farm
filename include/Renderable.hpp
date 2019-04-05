@@ -10,6 +10,7 @@ class Renderable {
 	public :
         Renderable();                          // Default ctor
 	    Renderable(int x, int y);              // User defined ctor : menentukan koordinat x dan y dalam ctor
+		virtual ~Renderable();				   // Virtual DTOR
 		virtual char render() const = 0;		// pure virtual dari method render
 		void setX(int x);                      // setter X
 		void setY(int y);                      // setter Y
