@@ -38,6 +38,7 @@ private:
     friend class MilkProducingFarmAnimal;
     friend class EggProducingFarmAnimal;
 
+
 public:
     // CTOR
     Scene();

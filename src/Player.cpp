@@ -38,10 +38,11 @@ void Player::addToInventory(Product* element){
 
 void Player::removeFromInventory(Product* element){
     productInventory.remove(element);
+    element->~Product();
 }
 
 Renderable* Player::getInFront(){
-    //butuh implementasi lebih lanjut
+
 }
 
 int Player::getGold() const{
