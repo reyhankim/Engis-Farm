@@ -10,6 +10,7 @@
 // Class Goat adalah blueprint dari objek FarmProduct
 class Goat : public MilkProducingFarmAnimal {
     public:
+        Goat(int axis, int ordinat);
         // mengembalikan karakter G
         char render() const override;
 

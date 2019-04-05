@@ -3,6 +3,11 @@
 #include "../include/Goat.hpp"
 #include "../include/GoatMilk.hpp"
 
+Goat::Goat(int axis, int ordinat){
+    this->x = axis;
+    this->y = ordinat;
+}
+
 // mengembalikan karakter D
 char Goat::render() const
 {
