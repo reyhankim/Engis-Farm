@@ -1,9 +1,13 @@
 #include <iostream>
-#include "../include/LeafInclude.hpp"
+#include "../Include/Scene.hpp"
+#include "../Include/Player.hpp"
+
+using namespace std;
+
+
 
 int main() {
-    Player P;
-    Scene S;
-    Chicken ayam1(1,1);
-    
+    Scene mainScene("test", 15, 15);
+
+    return 0;
 }

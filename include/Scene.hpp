@@ -34,6 +34,10 @@ private:
     // terakhir player.
     void UpdateFarmMap();
 
+    LinkedList<Cell *> fieldGenerator();
+
+    LinkedList<FarmAnimal *> animalGenerator(int modifier);
+
     friend class MeatProducingFarmAnimal;
     friend class MilkProducingFarmAnimal;
     friend class EggProducingFarmAnimal;
