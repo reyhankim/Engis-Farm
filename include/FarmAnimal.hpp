@@ -14,6 +14,8 @@
 
 using namespace std;
 
+class Scene;
+
 // Class FarmAnimal adalah abstract base class yang memiliki method animal dasar
 // dan menjadi dasar pembentukan class animal lainnya.
 // TAMBAHAN : Counter pada FarmAnimal untuk menghitung jumlah animal yang masih hidup
@@ -45,8 +47,7 @@ class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
         // method untuk mengurangi nilai hungryLevel animal
         void eat();
 
-        // method pure virtual untuk pergerakan animal
-        virtual void autoMove(Scene s) = 0;
+        virtual void autoMove(Scene* s) = 0;
 
         // virtual method untuk mendapatkan suara hewan
         virtual string sound() const = 0;

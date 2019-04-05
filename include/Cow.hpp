@@ -23,6 +23,8 @@ class Cow : public MeatProducingFarmAnimal, public MilkProducingFarmAnimal {
 
         // mengembalikan FarmProduct yang dihasilkan jika hewan dibunuh
         Product* getProductKilled() const override;
+
+        void autoMove(Scene *s) override;
 };
 
 

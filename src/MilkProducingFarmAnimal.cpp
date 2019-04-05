@@ -46,10 +46,6 @@ void MilkProducingFarmAnimal::autoMove(Scene* s){
         i++;
     }
 
-    if (s->player.getX() == targetX && s->player.getY() == targetY) {
-        validMove = 0;
-    }
-
     if (validMove == 1) {
         this->setX(targetX);
         this->setY(targetY);

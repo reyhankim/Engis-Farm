@@ -12,6 +12,10 @@
 #include <string>
 using namespace std;
 
+class FarmAnimal;
+
+class Player;
+
 // Kelas Scene adalah blueprint dari objek yang menampung koleksi objek pada game serta melakukan update terhadap peta pada Farm
 class Scene {
 private:
@@ -42,6 +46,8 @@ private:
     friend class MilkProducingFarmAnimal;
     friend class EggProducingFarmAnimal;
     friend class Player;
+    friend class Chicken;
+    friend class Cow;
 
 public:
     // CTOR

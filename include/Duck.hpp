@@ -10,7 +10,7 @@
 // Class Duck adalah blueprint dari objek FarmProduct
 class Duck : public EggProducingFarmAnimal {
     public:
-        Duck::Duck(int axis, int ordinat);
+        Duck(int axis, int ordinat);
         // mengembalikan karakter D
         char render() const override;
 

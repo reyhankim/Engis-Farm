@@ -12,6 +12,7 @@ Player::Player() : Renderable(){
     this->gold = 0;
     this->currentWater = this->maxWater;
     this->facing = 1;
+    productInventory = LinkedList<Product*>();
 }
 
 Player::~Player(){

@@ -11,8 +11,11 @@
 #include "LinkedList.hpp"
 #include "Cell.hpp"
 #include "FarmAnimal.hpp"
+#include "Land.hpp"
 
 class Scene;
+class FarmAnimal;
+class Land;
 
 // Class player menyimpan data-data seperti gold, currentWater, dan player facing
 // serta memiliki method untuk player berinteraksi dengan farm-nya
@@ -25,7 +28,7 @@ private:
     int currentWater;
 
     int facing; //1 : facing up, 2 : facing down, 3 : facing right, 4 : facing left
-	LinkedList<Product*> productInventory = LinkedList<Product*>();  // list of pointer to Product
+	LinkedList<Product*> productInventory;
 
 public:
 	//CTOR
@@ -44,7 +47,7 @@ public:
 	// menghapus Product dari inventory
 	void removeFromInventory(Product* element);
 	// mengembalikan objek Renderable yang berada di depan player
-	Renderable* getInFront(LinkedList<Cell *> field, LinkedList<FarmAnimal *> animals, int mapHeight, int mapWidth);
+	Renderable* getInFront(LinkedList<Cell *> field, LinkedList<FarmAnimal*> animals, int mapHeight, int mapWidth);
 
 	// getter
 	int getGold() const;

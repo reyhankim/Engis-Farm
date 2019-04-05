@@ -56,11 +56,6 @@ void EggProducingFarmAnimal::autoMove(Scene* s){
         validMove = 0;
     }
 
-    // QUICK
-    if (s->farmMap[targetX][targetY] != 'o') {
-        validMove != 1;
-    }
-
     if (validMove == 1) {
         this->setX(targetX);
         this->setY(targetY);
