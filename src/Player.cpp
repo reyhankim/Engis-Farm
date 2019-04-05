@@ -139,11 +139,11 @@ void Player::move(int direction){
     }
 }
 
-template<typename T>	
+template<typename T>
 void Player::talk<T>(T* x){
-    cout << "Hello" << endl;
     FarmAnimal *benda;
     if((benda = dynamic_cast<FarmAnimal*>(x)) != NULL){
+        cout << "Hello" << endl;
         cout << benda->sound() << endl;
     }
 }
@@ -172,10 +172,11 @@ void Player::interact<MilkProducingFarmAnimal>(MilkProducingFarmAnimal* x){
     }
 }
 
+/*
 template<typename T>
 void Player::interact<T>(T* x){
     //do nothing
-}
+} */
 
 template<>
 void Player::kill<MeatProducingFarmAnimal>(MeatProducingFarmAnimal* x){
@@ -197,11 +198,11 @@ void Player::kill<MeatProducingFarmAnimal>(MeatProducingFarmAnimal* x){
         addToInventory(new SwineMeat());
     }
 }
-
+/*
 template <typename T>
 void Player::kill<T>(T* x){
     //do nothing
-}
+} */
 
 template <typename T>
 void Player::grow<T>(T* r){

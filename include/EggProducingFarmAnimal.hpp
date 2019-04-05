@@ -14,7 +14,7 @@ class EggProducingFarmAnimal : public FarmAnimal {
         virtual ~EggProducingFarmAnimal();
         // method untuk pergerakan animal, hanya dapat bergerak di Coop
         // menerima List of Renderable* untuk mengecek cell yang akan ditempati
-        void autoMove(LinkedList<Renderable*> farmMap) override;
+        void autoMove() override;
 };
 
 

@@ -9,7 +9,7 @@
 }
         // method untuk pergerakan animal, hanya dapat bergerak di Coop
         // menerima List of Renderable* untuk mengecek cell yang akan ditempati
-        EggProducingFarmAnimal::autoMove(LinkedList<Renderable*> farmMap){
+        void EggProducingFarmAnimal::autoMove(){
 
 }
 
