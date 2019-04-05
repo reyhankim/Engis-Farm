@@ -1,6 +1,9 @@
 #include <iostream>
+#include "../include/LeafInclude.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    Player P;
+    Scene S;
+    Chicken ayam1(1,1);
+    
 }
