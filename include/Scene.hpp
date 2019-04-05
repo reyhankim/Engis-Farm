@@ -37,6 +37,7 @@ private:
     friend class MeatProducingFarmAnimal;
     friend class MilkProducingFarmAnimal;
     friend class EggProducingFarmAnimal;
+    friend class Player;
 
 public:
     // CTOR

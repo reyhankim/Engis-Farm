@@ -9,6 +9,7 @@
 #include "Renderable.hpp"
 #include "Product.hpp"
 #include "LinkedList.hpp"
+#include "Scene.hpp"
 
 // Class player menyimpan data-data seperti gold, currentWater, dan player facing
 // serta memiliki method untuk player berinteraksi dengan farm-nya
@@ -24,7 +25,7 @@ private:
 	LinkedList<Product*> productInventory = LinkedList<Product*>();  // list of pointer to Product
 
 public:
-
+	friend class Scene;
 	//CTOR
 	Player();
 
@@ -41,7 +42,7 @@ public:
 	// menghapus Product dari inventory
 	void removeFromInventory(Product* element);
 	// mengembalikan objek Renderable yang berada di depan player
-	Renderable* getInFront();
+	Renderable* getInFront(Scene s);
 
 	// getter
 	int getGold() const;
@@ -55,7 +56,7 @@ public:
     // method untuk mengubah posisi player ke arah tertentu.
 	// player mengubah orientasi tanpa bergerak jika collision dengan
 	// obyek yang tidak dapat dilewati (isWalkable()==false).
-    void move(int direction);
+    void move(int direction, Scene s);
 
 	// menerima objek Renderable, jika merupakan FarmAnimal mencetak hasil dari fungsi sound()
     template<typename T>

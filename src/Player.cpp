@@ -2,6 +2,7 @@
 #include "../include/Player.hpp"
 #include "../include/LeafInclude.hpp"
 #include "../include/Land.hpp"
+#include "../include/Scene.hpp"
 
 using namespace std;
 
@@ -40,8 +41,13 @@ void Player::removeFromInventory(Product* element){
     productInventory.remove(element);
 }
 
-Renderable* Player::getInFront(){
-    //butuh implementasi lebih lanjut
+Renderable* Player::getInFront(Scene s){
+    int i=0;
+    bool found = false;
+    while(!found && i<s.field.Count){
+        Node *test = s.field.head;
+        if(test->
+    }
 }
 
 int Player::getGold() const{
@@ -70,18 +76,16 @@ void Player::setCurrentWater(int water){
     }
 }
 
-void Player::move(int direction){
-    facing = direction;
-
-    if(facing == 1){
+void Player::move(int direction, Scene s){
+    if(direction == 1){
         try{
             if(getY() - 1 < 0){
                 throw "Di luar batas permainan";
             }
             
-            //if(! getInFront(listrender).isWalkable()){
-                //throw "Tidak bisa diakses";
-            //}
+            if(! getInFront(s).isWalkable()){
+                throw "Tidak bisa diakses";
+            }
             
             setY(getY() - 1);
         }
@@ -89,7 +93,7 @@ void Player::move(int direction){
             cout << e << endl;
         }
     }
-    else if(facing == 2){
+    else if(direction == 2){
         try{
             if(this->getY() + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
@@ -105,7 +109,7 @@ void Player::move(int direction){
             cout << e << endl;
         }
     }
-    else if(facing == 3){
+    else if(direction == 3){
         try{
             if(this->getX() + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
@@ -121,7 +125,7 @@ void Player::move(int direction){
             cout << e << endl;
         }
     }
-    else if(facing == 4){
+    else if(direction == 4){
         try{
             if(this->getX() - 1 < 0){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
@@ -137,6 +141,8 @@ void Player::move(int direction){
             cout << e << endl;
         }
     }
+
+    facing = direction;
 }
 
 template<typename T>	

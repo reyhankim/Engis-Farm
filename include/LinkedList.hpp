@@ -29,6 +29,7 @@ class LinkedList{
 
 	public :
 		Node* head = NULL;
+		int Count;
 
 		LinkedList();
 

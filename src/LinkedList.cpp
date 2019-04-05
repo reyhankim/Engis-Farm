@@ -3,6 +3,7 @@
 template<class T>
 LinkedList<T>::LinkedList(){
 	head = NULL;
+	Count = 0;
 }
 
 template<class T>
@@ -10,7 +11,10 @@ LinkedList<T>::LinkedList(const LinkedList& L){
 	Node* iter = L.head;
     while(iter != NULL) {
     	add(iter->info);
+		iter = iter->next;
     }
+
+	Count = L.Count;
 }
 
 template<class T>
@@ -39,6 +43,8 @@ LinkedList<T>& LinkedList<T>::operator= (const LinkedList<T>& L){
 			iter = iter->next;
         }
     }
+
+	Count = L.Count;
     return *this;
 }
 
@@ -96,6 +102,8 @@ void LinkedList<T>::remove(T element){
 
 			delete iter;
 		}
+
+		Count--;
 	}
 }
 
@@ -115,6 +123,8 @@ void LinkedList<T>::add(T element){
 	else{
 		head = input;
 	}
+
+	Count++;
 }
 
 template<class T>
