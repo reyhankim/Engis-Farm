@@ -11,6 +11,11 @@
 
 using namespace std;
 
+Mixer::Mixer(int axis, int ordinat){
+    this->x = axis;
+    this->y = ordinat;
+}
+
 char Mixer::render() const{
     return 'X';
 }

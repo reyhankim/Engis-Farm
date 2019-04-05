@@ -11,6 +11,7 @@
 // Class Coop adalah blueprint dari objek turunan "Land" khusus EggProducingFarmAnimal
 class Coop : public Land {
 public:
+    Coop(int axis, int ordinat);
     char render() const override;       // Mengembalikan karakter o
 };
 

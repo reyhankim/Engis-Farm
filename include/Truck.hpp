@@ -13,6 +13,9 @@ class Truck : public Facility {
 	public :
 		//CTOR
 		Truck();
+
+		//CTOR UD
+		Truck(int axis, int ordinat);
 		
 		//DTOR
 		~Truck();

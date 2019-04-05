@@ -11,6 +11,7 @@
 // Class Grassland adalah blueprint dari objek turunan "Land" khusus MilkProducingFarmAnimal
 class Grassland : public Land {
 public:
+    Grassland(int x, int y);
     char render() const override;       // Mengembalikan karakter -
 };
 

@@ -14,6 +14,8 @@
 // Class Mixer adalah blueprint dari objek turunan "Facility" yang dapat menghasilkan SideProduct dari gabungan FarmProduct
 class Mixer : public Facility {
 	public :
+		Mixer(int axis, int ordinat);
+
 		//Render
 		char render() const override;
 		

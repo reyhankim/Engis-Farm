@@ -9,6 +9,7 @@
 // Class Barn adalah blueprint dari objek turunan "Land" khusus MeatProducingFarmAnimal
 class Barn : public Land {
 public:
+    Barn(int axis, int ordinat);
     char render() const override;       // Mengembalikan karakter x
 };
 
