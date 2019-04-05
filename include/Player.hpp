@@ -58,17 +58,21 @@ public:
     void move(int direction);
 
 	// menerima objek Renderable, jika merupakan FarmAnimal mencetak hasil dari fungsi sound()
-    void talk(Renderable*);
+    template<typename T>
+	void talk(T* x);
 
 	// menerima objek Renderable dan melakukan interaksi berdasarkan jenis kelas turunannya
-    void interact(Renderable*);
+    template<typename T>
+	void interact(T* x);
 
 	// menerima objek Renderable, jika merupakan FarmAnimal membunuhnya dengan cara memanggil
 	// dekostruktornya.
-    void kill(Renderable*);			// Marked by Kim: Kill untuk masing-masing hewan menghasilkan product berbeda, apa mending template aja?
+	template<typename T>
+    void kill(T* x);			// Marked by Kim: Kill untuk masing-masing hewan menghasilkan product berbeda, apa mending template aja?
 
 	// menyiram (mengurangi air) petak yang ditempati player sehingga tumpuh rumput (grass)
-    void grow();
+	template<typename T>
+    void grow(T* r);
 };
 
 #endif //ENGISFARM_PLAYER_HPP

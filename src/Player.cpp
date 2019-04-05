@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../include/Player.hpp"
+#include "../include/LeafInclude.hpp"
 using namespace std;
 
 Player::Player() : Renderable(){
@@ -136,15 +137,66 @@ void Player::move(int direction){
     }
 }
 
-	
-void talk(Renderable* x){
+template<typename T>	
+void Player::talk<T>(T* x){
     cout << "Hello" << endl;
+    FarmAnimal *benda;
+    if(benda = dynamic_cast<FarmAnimal*>(x) != NULL){
+        cout << benda->sound() << endl;
+    }
 }
 
-	
-void interact(Renderable*);
+template<>
+void Player::interact<EggProducingAnimal>(EggProducingAnimal x){
+    Chicken *ayam;
+    Duck *bebek;
+    if(ayam = static_cast<Chicken*>(x) != NULL){
+        addToInventory(new ChickenEgg());
+    }
+    else if(bebek = static_cast<Duck*>(x) != NULL){
+        addToInventory(new DuckEgg());
+    }
+}
+
+template<>
+void Player::interact<MilkProducingAnimal>(MilkProducingAnimal x){
+    Goat *kambing;
+    Cow *sapi;
+    if(kambing = static_cast<Goat*>(x) != NULL){
+        addToInventory(new GoatMilk());
+    }
+    else if(sapi = static_cast<Cow*>(x) != NULL){
+        addToInventory(new CowMilk());
+    }
+}
 
 
-void kill(Renderable*);	
 
-void grow();
+template<>
+void Player::kill<MeatProducingAnimal>(MeatProducingAnimal x){
+    Chicken *ayam;
+    Cow *sapi;
+    Horse *kuda;
+    Swine *haram;
+
+    if(ayam = static_cast<Chicken*>(x) != NULL){
+        addToInventory(new ChickenMeat());
+    }
+    else if(sapi = static_cast<Cow*>(x) != NULL){
+        addToInventory(new CowMeat());
+    }
+    else if(kuda = static_cast<Horse*>(x) != NULL){
+        addToInventory(new HorseMeat());
+    }
+    else if(haram = static_cast<Swine*>(x) != NULL){
+        addToInventory(new SwineMeat());
+    }
+}	
+
+template <typename T>
+void Player::grow<T>(T* r){
+    Land *lahan;
+    if(lahan = dynamic_cast<Land*>(r)){
+        r->setGrass(true);
+    }
+}
