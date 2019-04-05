@@ -1,6 +1,7 @@
 
 #include "../include/MeatProducingFarmAnimal.hpp"
 #include "../include/Scene.hpp"
+#include "../include/Barn.hpp"
 
 // Class MeatProducingFarmAnimal digunakan untuk mengelompokkan animal
 
@@ -32,7 +33,7 @@ void MeatProducingFarmAnimal::autoMove(Scene* s){
     int i = 0; int found = 0;
     while (i < s->farmMapHeight*s->farmMapWidth && found == 0) {
         if (s->field.get(i)->getX() == targetX && s->field.get(i)->getY() == targetY) {
-            if (Cell *f = dynamic_cast<Cell *>(s->field.get(i))) {
+            if (Barn* f = dynamic_cast<Barn *>(s->field.get(i))) {
                 // valid move
             } else { validMove = 0; }
             found = 1;
@@ -51,11 +52,6 @@ void MeatProducingFarmAnimal::autoMove(Scene* s){
 
     if (s->player.getX() == targetX && s->player.getY() == targetY) {
         validMove = 0;
-    }
-
-    // QUICK
-    if (s->farmMap[targetX][targetY] != 'x') {
-        validMove != 1;
     }
 
     if (validMove == 1) {

@@ -1,5 +1,6 @@
 #include "../include/MilkProducingFarmAnimal.hpp"
 #include "../include/Scene.hpp"
+#include "../include/Grassland.hpp"
 
 // Class MilkProducingFarmAnimal digunakan untuk mengelompokkan animal
 // DTOR Virtual
@@ -28,7 +29,7 @@ void MilkProducingFarmAnimal::autoMove(Scene* s){
     int i = 0; int found = 0;
     while (i < s->farmMapHeight*s->farmMapWidth && found == 0) {
         if (s->field.get(i)->getX() == targetX && s->field.get(i)->getY() == targetY) {
-            if (Cell *f = dynamic_cast<Cell *>(s->field.get(i))) {
+            if (Grassland* f = dynamic_cast<Grassland *>(s->field.get(i))) {
                 // valid move
             } else { validMove = 0; }
             found = 1;
@@ -47,11 +48,6 @@ void MilkProducingFarmAnimal::autoMove(Scene* s){
 
     if (s->player.getX() == targetX && s->player.getY() == targetY) {
         validMove = 0;
-    }
-
-    // QUICK
-    if (s->farmMap[targetX][targetY] != '-') {
-        validMove != 1;
     }
 
     if (validMove == 1) {

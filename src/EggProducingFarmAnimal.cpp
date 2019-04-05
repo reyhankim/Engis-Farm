@@ -3,6 +3,7 @@
 #include "../include/EggProducingFarmAnimal.hpp"
 #include "../include/Scene.hpp"
 #include "../include/Facility.hpp"
+#include "../include/Coop.hpp"
 
 // Class EggProducingFarmAnimal digunakan untuk mengelompokkan animal
 
@@ -34,7 +35,7 @@ void EggProducingFarmAnimal::autoMove(Scene* s){
     int i = 0; int found = 0;
     while (i < s->farmMapHeight*s->farmMapWidth && found == 0) {
         if (s->field.get(i)->getX() == targetX && s->field.get(i)->getY() == targetY) {
-            if (Cell *f = dynamic_cast<Cell *>(s->field.get(i))) {
+            if (Coop *f = dynamic_cast<Coop *>(s->field.get(i))) {
                 // valid move
             } else { validMove = 0; }
             found = 1;
