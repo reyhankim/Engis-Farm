@@ -3,6 +3,11 @@
 #include "../include/Horse.hpp"
 #include "../include/GoatMilk.hpp"
 
+Horse::Horse(int axis, int ordinat){
+    this->x = axis;
+    this->y = ordinat;
+}
+
 // mengembalikan karakter D
 char Horse::render() const
 {

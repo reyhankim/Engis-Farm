@@ -239,7 +239,7 @@ void Player::kill<T>(T* x){
 template <typename T>
 void Player::grow<T>(T* r){
     Land *lahan;
-    if(lahan = dynamic_cast<Land*>(r)){
+    if(lahan = dynamic_cast<Land*>(r) != NULL){
         r->setGrass(true);
     }
 }
