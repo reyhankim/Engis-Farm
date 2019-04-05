@@ -31,7 +31,7 @@ class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
         FarmAnimal(string name, bool _interactable);
 
         // DTOR Virtual
-        virtual ~FarmAnimal();
+        virtual ~FarmAnimal() = 0;
 
         // getter
         bool isInteractable() const;
@@ -45,8 +45,7 @@ class FarmAnimal : public Renderable, public Counter<FarmAnimal> {
         void eat();
 
         // method pure virtual untuk pergerakan animal
-        // menerima List of Renderable* untuk mengecek cell yang akan ditempati
-        virtual void autoMove(LinkedList<Renderable*> farmMap) = 0;
+        virtual void autoMove() = 0;
 
         // virtual method untuk mendapatkan suara hewan
         virtual string sound() const = 0;

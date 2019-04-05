@@ -17,6 +17,7 @@ class Cell : public Renderable {
         // getter untuk walkable
 		bool isWalkable() const;
 		void setWalkable(bool input);        // setter untuk walkable
+		virtual void randomGrass() = 0;
 };
 
 

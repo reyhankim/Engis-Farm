@@ -34,6 +34,10 @@ private:
     // terakhir player.
     void UpdateFarmMap();
 
+    friend class MeatProducingFarmAnimal;
+    friend class MilkProducingFarmAnimal;
+    friend class EggProducingFarmAnimal;
+
 public:
     // CTOR
     Scene();
