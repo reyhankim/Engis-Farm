@@ -10,6 +10,7 @@
 #include "Product.hpp"
 #include "LinkedList.hpp"
 #include "Counter.hpp"
+#include "Scene.hpp"
 
 using namespace std;
 
