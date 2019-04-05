@@ -30,11 +30,11 @@ bool Player::isInventoryEmpty(){
     return productInventory.isEmpty();
 }
 
-void Player::addToInventory(Product element){
+void Player::addToInventory(Product* element){
     productInventory.add(element);
 }
 
-void Player::removeFromInventory(Product element){
+void Player::removeFromInventory(Product* element){
     productInventory.remove(element);
 }
 
@@ -53,7 +53,7 @@ int Player::getCurrentWater() const{
     return this->currentWater;
 }
 
-Product Player::getProductFromInventory(int index){
+Product* Player::getProductFromInventory(int index){
     return productInventory.get(index);
 }
 
@@ -141,57 +141,65 @@ template<typename T>
 void Player::talk<T>(T* x){
     cout << "Hello" << endl;
     FarmAnimal *benda;
-    if(benda = dynamic_cast<FarmAnimal*>(x) != NULL){
+    if((benda = dynamic_cast<FarmAnimal*>(x)) != NULL){
         cout << benda->sound() << endl;
     }
 }
 
 template<>
-void Player::interact<EggProducingAnimal>(EggProducingAnimal x){
+void Player::interact<EggProducingFarmAnimal>(EggProducingFarmAnimal* x){
     Chicken *ayam;
     Duck *bebek;
-    if(ayam = static_cast<Chicken*>(x) != NULL){
+    if((ayam = dynamic_cast<Chicken*>(x)) != NULL){
         addToInventory(new ChickenEgg());
     }
-    else if(bebek = static_cast<Duck*>(x) != NULL){
+    else if((bebek = dynamic_cast<Duck*>(x)) != NULL){
         addToInventory(new DuckEgg());
     }
 }
 
 template<>
-void Player::interact<MilkProducingAnimal>(MilkProducingAnimal x){
+void Player::interact<MilkProducingFarmAnimal>(MilkProducingFarmAnimal* x){
     Goat *kambing;
     Cow *sapi;
-    if(kambing = static_cast<Goat*>(x) != NULL){
+    if((kambing = dynamic_cast<Goat*>(x)) != NULL){
         addToInventory(new GoatMilk());
     }
-    else if(sapi = static_cast<Cow*>(x) != NULL){
+    else if((sapi = dynamic_cast<Cow*>(x)) != NULL){
         addToInventory(new CowMilk());
     }
 }
 
-
+template<typename T>
+void Player::interact<T>(T* x){
+    //do nothing
+}
 
 template<>
-void Player::kill<MeatProducingAnimal>(MeatProducingAnimal x){
+void Player::kill<MeatProducingFarmAnimal>(MeatProducingFarmAnimal* x){
     Chicken *ayam;
     Cow *sapi;
     Horse *kuda;
     Swine *haram;
 
-    if(ayam = static_cast<Chicken*>(x) != NULL){
+    if((ayam = dynamic_cast<Chicken*>(x)) != NULL){
         addToInventory(new ChickenMeat());
     }
-    else if(sapi = static_cast<Cow*>(x) != NULL){
+    else if((sapi = dynamic_cast<Cow*>(x)) != NULL){
         addToInventory(new CowMeat());
     }
-    else if(kuda = static_cast<Horse*>(x) != NULL){
+    else if((kuda = dynamic_cast<Horse*>(x)) != NULL){
         addToInventory(new HorseMeat());
     }
-    else if(haram = static_cast<Swine*>(x) != NULL){
+    else if((haram = dynamic_cast<Swine*>(x)) != NULL){
         addToInventory(new SwineMeat());
     }
-}	
+}
+
+template <typename T>
+void Player::kill<T>(T* x){
+    //do nothing
+}
 
 template <typename T>
 void Player::grow<T>(T* r){
