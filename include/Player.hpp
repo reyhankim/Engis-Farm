@@ -42,7 +42,7 @@ public:
 	// menghapus Product dari inventory
 	void removeFromInventory(Product* element);
 	// mengembalikan objek Renderable yang berada di depan player
-	Renderable* getInFront(Scene s);
+	Renderable* getInFront();
 
 	// getter
 	int getGold() const;
