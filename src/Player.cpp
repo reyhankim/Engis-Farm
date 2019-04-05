@@ -3,6 +3,8 @@
 #include "../include/LeafInclude.hpp"
 #include "../include/Land.hpp"
 #include "../include/Scene.hpp"
+#include "../include/Counter.hpp"
+#include "../include/FarmAnimal.hpp"
 
 using namespace std;
 
@@ -42,8 +44,36 @@ void Player::removeFromInventory(Product* element){
     element->~Product();
 }
 
-Renderable* Player::getInFront(){
+// <scene_object>.field. <scene_object>.animals
+// Tidak ada yang di depannya -> RETURN NULL
+Renderable* Player::getInFront(LinkedList<Cell *> field, LinkedList<FarmAnimal *> animals, int mapHeight, int mapWidth) {
+    int xFront, yFront;
+    Renderable* renderableAddress = nullptr;
 
+    if (this->getFacing() == 1) {           // atas
+        xFront = this->getX();
+        yFront = this->getY()-1;
+    } else if (this->getFacing() == 2){     // bawah
+        xFront = this->getX();
+        yFront = this->getY()+1;
+    } else if (this->getFacing() == 3) {    // kiri
+        xFront = this->getX()-1;
+        yFront = this->getY();
+    } else {                                // kanan
+        xFront = this->getX()+1;
+        yFront = this->getY();
+    }
+
+    int i = 0;
+    while ((field.get(i)->getX() != xFront && field.get(i)->getY() != yFront) || i < mapHeight*mapWidth) {
+        if (Facility* f = dynamic_cast<Facility*>(field.get(i))) {
+            renderableAddress = field.get(i);
+        }
+    }
+    while ((animals.get(i)->getX() != xFront && animals.get(i)->getY() != yFront) || i < Counter<FarmAnimal>::objects_alive) {
+        renderableAddress = animals.get(i);
+    }
+    return renderableAddress;
 }
 
 int Player::getGold() const{
@@ -72,14 +102,14 @@ void Player::setCurrentWater(int water){
     }
 }
 
-void Player::move(int direction, Scene s){
+void Player::move(int direction, LinkedList<Cell *> field, LinkedList<FarmAnimal *> animals, int mapHeight, int mapWidth){
     if(direction == 1){
         try{
             if(getY() - 1 < 0){
                 throw "Di luar batas permainan";
             }
             
-            if(! getInFront(s).isWalkable()){
+            if(!dynamic_cast<Cell*>(getInFront(field, animals, mapHeight, mapWidth))->isWalkable()){
                 throw "Tidak bisa diakses";
             }
             
@@ -91,11 +121,11 @@ void Player::move(int direction, Scene s){
     }
     else if(direction == 2){
         try{
-            if(this->getY() + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
+            if(this->getY() + 1 > mapHeight - 1){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
             }
             
-            if(!getInFront()->isWalkable()){
+            if(!dynamic_cast<Cell*>(getInFront(field, animals, mapHeight, mapWidth))->isWalkable()){
                 throw "Tidak bisa diakses";
             }
 
@@ -107,11 +137,11 @@ void Player::move(int direction, Scene s){
     }
     else if(direction == 3){
         try{
-            if(this->getX() + 1 > 8){ //catatan untuk developer (ubah 8 dengan batas maksimum)
+            if(this->getX() + 1 > mapWidth - 1){ //catatan untuk developer (ubah 8 dengan batas maksimum)
                 throw "Di luar batas permainan";
             }
             
-            if(! getInFront(listrender).isWalkable()){
+            if(!dynamic_cast<Cell*>(getInFront(field, animals, mapHeight, mapWidth))->isWalkable()){
                 throw "Tidak bisa diakses";
             }
 
@@ -127,7 +157,7 @@ void Player::move(int direction, Scene s){
                 throw "Di luar batas permainan";
             }
             
-            if(! getInFront(listrender).isWalkable()){
+            if(!dynamic_cast<Cell*>(getInFront(field, animals, mapHeight, mapWidth))->isWalkable()){
                 throw "Tidak bisa diakses";
             }
 

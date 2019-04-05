@@ -39,7 +39,6 @@ private:
     friend class EggProducingFarmAnimal;
     friend class Player;
 
-
 public:
     // CTOR
     Scene();
