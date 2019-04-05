@@ -21,7 +21,7 @@ private:
     int currentWater;
 
     int facing; //1 : facing up, 2 : facing down, 3 : facing right, 4 : facing left
-	LinkedList<Product> productInventory = LinkedList<Product>();  // list of pointer to Product
+	LinkedList<Product*> productInventory = LinkedList<Product*>();  // list of pointer to Product
 
 public:
 
@@ -37,9 +37,9 @@ public:
 	// mengembalikan true jika productInventory kosong / memiliki 0 elemen
 	bool isInventoryEmpty();
 	// menambahkan Product ke inventory
-	void addToInventory(Product element);
+	void addToInventory(Product* element);
 	// menghapus Product dari inventory
-	void removeFromInventory(Product element);
+	void removeFromInventory(Product* element);
 	// mengembalikan objek Renderable yang berada di depan player
 	Renderable* getInFront();
 
@@ -47,7 +47,7 @@ public:
 	int getGold() const;
 	int getFacing() const;
 	int getCurrentWater() const;
-	Product getProductFromInventory(int index);
+	Product* getProductFromInventory(int index);
 	//setter
 	void setGold(int amount);
 	void setCurrentWater(int water);
