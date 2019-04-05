@@ -39,15 +39,11 @@ void Player::addToInventory(Product* element){
 
 void Player::removeFromInventory(Product* element){
     productInventory.remove(element);
+    element->~Product();
 }
 
-Renderable* Player::getInFront(Scene s){
-    int i=0;
-    bool found = false;
-    while(!found && i<s.field.Count){
-        Node *test = s.field.head;
-        if(test->
-    }
+Renderable* Player::getInFront(){
+
 }
 
 int Player::getGold() const{
@@ -145,11 +141,11 @@ void Player::move(int direction, Scene s){
     facing = direction;
 }
 
-template<typename T>	
+template<typename T>
 void Player::talk<T>(T* x){
-    cout << "Hello" << endl;
     FarmAnimal *benda;
     if((benda = dynamic_cast<FarmAnimal*>(x)) != NULL){
+        cout << "Hello" << endl;
         cout << benda->sound() << endl;
     }
 }
@@ -178,10 +174,11 @@ void Player::interact<MilkProducingFarmAnimal>(MilkProducingFarmAnimal* x){
     }
 }
 
+/*
 template<typename T>
 void Player::interact<T>(T* x){
     //do nothing
-}
+} */
 
 template<>
 void Player::kill<MeatProducingFarmAnimal>(MeatProducingFarmAnimal* x){
@@ -203,11 +200,11 @@ void Player::kill<MeatProducingFarmAnimal>(MeatProducingFarmAnimal* x){
         addToInventory(new SwineMeat());
     }
 }
-
+/*
 template <typename T>
 void Player::kill<T>(T* x){
     //do nothing
-}
+} */
 
 template <typename T>
 void Player::grow<T>(T* r){

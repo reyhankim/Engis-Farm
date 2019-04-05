@@ -17,6 +17,7 @@ char Mixer::render() const{
 
 template <>
 SideProduct* Mixer::mix<CowMeat, ChickenEgg>(CowMeat bahan1, ChickenEgg bahan2){
+    // CowMeat + ChickenEgg = BeefRolade
     return new BeefRolade();
 }
 
@@ -45,6 +46,7 @@ SideProduct* Mixer::mix<CowMilk, CowMeat>(CowMilk bahan1, CowMeat bahan2){
     return new BeefSteak();
 }
 
+//
 template <typename U, typename V>
 SideProduct* Mixer::mix<U, V>(U bahan1, V bahan2){
     return NULL;

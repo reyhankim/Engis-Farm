@@ -1,3 +1,6 @@
+#ifndef ENGISFARM_COUNTER_HPP
+#define ENGISFARM_COUNTER_HPP
+
 template <typename T>
 class Counter
 {
@@ -11,3 +14,5 @@ class Counter
     // atribut yang mencatat obyek yang telah diinstansiasi
     static int objects_created;
 };
+
+#endif //ENGISFARM_COUNTER_HPP
