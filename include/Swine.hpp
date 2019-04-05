@@ -10,6 +10,7 @@
 // Class Swine adalah blueprint dari objek FarmProduct
 class Swine : public MeatProducingFarmAnimal {
     public:
+        Swine(int axis, int ordinat);
         // mengembalikan karakter S
         char render() const override;
 

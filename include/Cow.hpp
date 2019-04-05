@@ -11,6 +11,7 @@
 // Class Cow adalah blueprint dari objek FarmProduct
 class Cow : public MeatProducingFarmAnimal, public MilkProducingFarmAnimal {
     public:
+        Cow(int axis, int ordinat);
         // mengembalikan karakter W
         char render() const override;
 

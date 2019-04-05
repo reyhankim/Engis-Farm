@@ -8,13 +8,14 @@
 #include "FarmAnimal.hpp"
 
 // Class EggProducingFarmAnimal digunakan untuk mengelompokkan animal
-class EggProducingFarmAnimal : public FarmAnimal {
+class EggProducingFarmAnimal : virtual public FarmAnimal {
     public:
+        EggProducingFarmAnimal();
         // DTOR Virtual
         virtual ~EggProducingFarmAnimal();
         // method untuk pergerakan animal, hanya dapat bergerak di Coop
         // menerima List of Renderable* untuk mengecek cell yang akan ditempati
-        void autoMove() override;
+        void autoMove();
 };
 
 

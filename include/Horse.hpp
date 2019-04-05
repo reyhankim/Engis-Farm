@@ -10,6 +10,8 @@
 // Class Horse adalah blueprint dari objek FarmProduct
 class Horse : public MeatProducingFarmAnimal {
     public:
+        Horse(int axis, int ordinat);
+        
         // mengembalikan karakter H
         char render() const override;
 

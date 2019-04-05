@@ -3,6 +3,11 @@
 #include "../include/Duck.hpp"
 #include "../include/DuckEgg.hpp"
 
+Duck::Duck(int axis, int ordinat){
+    this->x = axis;
+    this->y = ordinat;
+}
+
 // mengembalikan karakter D
 char Duck::render() const
 {

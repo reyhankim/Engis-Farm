@@ -3,6 +3,11 @@
 #include "../include/Chicken.hpp"
 #include "../include/ChickenEgg.hpp"
 
+Chicken::Chicken(int axis, int ordinat){
+    this->x = axis;
+    this->y = ordinat;
+}
+
 // mengembalikan karakter C
 char Chicken::render() const
 {

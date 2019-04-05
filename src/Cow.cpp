@@ -4,6 +4,11 @@
 #include "../include/CowMilk.hpp"
 #include "../include/CowMeat.hpp"
 
+Cow::Cow(int axis, int ordinat){
+    this->x = axis;
+    this->y = ordinat;
+}
+
 // mengembalikan karakter W
 char Cow::render() const
 {

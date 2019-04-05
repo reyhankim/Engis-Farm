@@ -3,6 +3,11 @@
 #include "../include/Swine.hpp"
 #include "../include/ChickenEgg.hpp"
 
+Swine::Swine(int axis, int ordinat){
+    this->x = axis;
+    this->y = ordinat;
+}
+
 // mengembalikan karakter S
 char Swine::render() const
 {
