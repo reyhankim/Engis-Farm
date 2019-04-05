@@ -171,13 +171,9 @@ void Player::move(int direction, LinkedList<Cell *> field, LinkedList<FarmAnimal
     facing = direction;
 }
 
-template<typename T>
-void Player::talk<T>(T* x){
-    FarmAnimal *benda;
-    if((benda = dynamic_cast<FarmAnimal*>(x)) != NULL){
-        cout << "Hello" << endl;
-        cout << benda->sound() << endl;
-    }
+void Player::talk(FarmAnimal* x){
+    cout << "Hello" << endl;
+    cout << x->sound() << endl;
 }
 
 template<>
@@ -236,10 +232,6 @@ void Player::kill<T>(T* x){
     //do nothing
 } */
 
-template <typename T>
-void Player::grow<T>(T* r){
-    Land *lahan;
-    if(lahan = dynamic_cast<Land*>(r) != NULL){
-        r->setGrass(true);
-    }
+void Player::grow(Land* r){
+    r->setGrass(true);
 }
