@@ -332,38 +332,100 @@ void Scene::commandKill()
 
     FarmAnimal* tempAnimal;
     FarmAnimal* killAnimal;
-
-    for (int i = 0; i<animals.count; i++){
+    bool found = false;
+    int i = 0;
+    while(i < animals.count && !found){
         tempAnimal = animals.get(i);
 
         if (tempAnimal->getX() == destX && tempAnimal->getY() == destY){
             if(dynamic_cast<MeatProducingFarmAnimal*>(tempAnimal)){
                 killAnimal = tempAnimal;
+                found = true;
             }
+            else{
+                i++;
+            }
+        }
+        else{
+            i++;
         }
     }
 
     if(killable && killAnimal != NULL){
-        if(dynamic_cast<Chicken*>(killAnimal)){
-            player.addToInventory(new ChickenMeat());
-        }
-        else if(dynamic_cast<Cow*>(killAnimal)){
-            player.addToInventory(new CowMeat());
-        }
-        else if(dynamic_cast<Horse*>(killAnimal)){
-            player.addToInventory(new HorseMeat());
-        }
-        else if(dynamic_cast<Swine*>(killAnimal)){
-            player.addToInventory(new SwineMeat());
-        }
-        //animals.remove(killAnimal);
-        killAnimal->~FarmAnimal();
+        player.addToInventory(killAnimal->getProductKilled());
+        
+        animals.remove(killAnimal);
+        
+    }
+    else{
+        cout << "Tidak ada hewan di dekatmu" << endl;
     }
 }
 
 void Scene::commandGrow()
-{
+{   bool growable = true;
+    int face = player.getFacing();
+    int destX, destY;
 
+    if(face == 1){
+        if(player.getY() - 1 < 0){
+            growable = false;
+        }
+        else{
+            destY = player.getY() - 1;
+            destX = player.getX();
+        }
+    }
+    else if(face == 2){
+        if(player.getX() + 1 < 0){
+            growable = false;
+        }
+        else{
+            destY = player.getY();
+            destX = player.getX() + 1;
+        }
+    }
+    else if(face == 3){
+        if(player.getY() + 1 < 0){
+            growable = false;
+        }
+        else{
+            destY = player.getY() + 1;
+            destX = player.getX();
+        }
+    }
+    else if(face == 4){
+        if(player.getX() - 1 < 0){
+            growable = false;
+        }
+        else{
+            destY = player.getY();
+            destX = player.getX() - 1;
+        }
+    }
+
+    Cell* target;
+    Cell* tempTarget;
+
+    if(player.getCurrentWater() == 0){
+        cout << "Air kamu habis" << endl;
+        growable =false;
+    }
+    else{
+        for (int i = 0; i<field.count; i++){
+            tempTarget = field.get(i);
+
+            if (tempTarget->getX() == destX && tempTarget->getY() == destY){
+                if(dynamic_cast<Land*>(tempTarget)){
+                    target = tempTarget;
+                }
+            }
+        }
+    }
+
+    if(growable && target != NULL){
+        target->setGrass(true);
+    }
 }
 
 void Scene::commandTalk()

@@ -35,5 +35,8 @@ int main() {
         else if (command == "talk"){
             mainScene.commandTalk();
         }
+        else if (command == "grow"){
+            mainScene.commandGrow();
+        }
     }
 }
