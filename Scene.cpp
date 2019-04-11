@@ -98,11 +98,27 @@ void Scene::UpdateFarmMap() {
 
         Cell* currentCell = this->field.get(i);
 
+        char tempRender;
+
         if (Land* l = dynamic_cast<Land*>(currentCell)) {
             l->randomGrass();
+
+            if (l->getGrass())
+            {
+                tempRender = '#';
+            }
+            else
+            {
+                tempRender = currentCell->render();
+            }
+            
+        }
+        else
+        {
+            tempRender = currentCell->render();
         }
 
-        this->farmMap[currentCell->getY()][currentCell->getX()] = currentCell->render();
+        this->farmMap[currentCell->getY()][currentCell->getX()] = tempRender;
     }
 
     // Step 2: Memanggil render() untuk mendapatkan posisi ANIMALS dari Farm sekarang
