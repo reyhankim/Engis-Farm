@@ -49,6 +49,7 @@ public:
 	Product* getProductFromInventory(int index);
 	//setter
 	void setGold(int amount);
+	void setFacing(int direction);
 	void setCurrentWater(int water);
 };
 

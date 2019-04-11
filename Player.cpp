@@ -26,9 +26,9 @@ char Player::render() const {
         case 1 :
             return '^';
         case 2 :
-            return 'V';
-        case 3 :
             return '>';
+        case 3 :
+            return 'V';
         case 4 :
             return '<';
         default :
@@ -65,6 +65,11 @@ Product* Player::getProductFromInventory(int index){
 
 void Player::setGold(int amount){
     gold += amount;
+}
+
+void Player::setFacing(int direction)
+{
+    facing = direction;
 }
 
 void Player::setCurrentWater(int water){

@@ -262,7 +262,8 @@ LinkedList<FarmAnimal *> Scene::animalGenerator(int modifier)
 
 void Scene::commandMove(int direction)
 {
-
+    player.move(direction, field, farmMapWidth, farmMapHeight);
+    player.setFacing(direction);
 }
 
 void Scene::commandInteract()
@@ -287,5 +288,5 @@ void Scene::commandTalk()
 
 void Scene::commandMix()
 {
-    
+
 }
