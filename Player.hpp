@@ -10,8 +10,6 @@
 #include "LinkedList.hpp"
 #include "Product.hpp"
 
-class Scene;
-
 // Class player menyimpan data-data seperti gold, currentWater, dan player facing
 // serta memiliki method untuk player berinteraksi dengan farm-nya
 class Player : public MovingObject {

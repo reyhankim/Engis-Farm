@@ -1,6 +1,7 @@
 #include "MovingObject.hpp"
 #include "LinkedList.hpp"
 #include "Node.hpp"
+#include <iostream>
 
 MovingObject::MovingObject() {}
 
@@ -8,7 +9,7 @@ MovingObject::MovingObject(int x, int y) : Renderable(x, y) {}
 
 MovingObject::~MovingObject() {}
 
-int MovingObject::move(int direction, LinkedList<Cell*> field)
+int MovingObject::move(int direction, LinkedList<Cell*> field, int fieldXBoundary, int fieldYBoundary)
 {
     bool canMove = true;
     int destX;
@@ -38,16 +39,23 @@ int MovingObject::move(int direction, LinkedList<Cell*> field)
             break;
     }
 
-    Node<Cell *> * tempNode = field.head;
-    
-    while(tempNode != NULL)
+    if (destX < 0 || destY < 0 || destX >= fieldXBoundary || destY >= fieldYBoundary)
     {
-        int a = tempNode->info->getX();
-        if (tempNode->info->getX() == destX && tempNode->info->getY() == destY)
+        canMove = false;
+    }
+    else
+    {
+        Node<Cell *> tempNode;
+
+        for (int i = 0; i<field.count; i++)
         {
-            if (!tempNode->info->isWalkable())
+            tempNode = field.get(i);
+            if (tempNode.info->getX() == destX && tempNode.info->getY() == destY)
             {
-                canMove = false;
+                if (!tempNode.info->isWalkable())
+                {
+                    canMove = false;
+                }
             }
         }
     }

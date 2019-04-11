@@ -1,9 +1,13 @@
 #include <iostream>
 #include "Scene.hpp"
+#include "Cell.hpp"
 
 int main() {
     Scene mainScene;
-    cout << 1 <<endl;
-    mainScene.drawScene();
-    cout << 2 <<endl;
+    while(1)
+    {
+        mainScene.drawScene();
+        char x;
+        cin >> x;
+    }
 }

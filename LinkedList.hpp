@@ -12,7 +12,7 @@ class LinkedList{
 
 	public :
 		Node<T>* head = NULL;
-		int Count;
+		int count;
 
 		LinkedList();
 
@@ -20,7 +20,7 @@ class LinkedList{
 
 		~LinkedList();
 
-		//LinkedList& operator=(const LinkedList& L);
+		LinkedList& operator=(const LinkedList& L);
 
 		bool isEmpty(){				// Mengembalikan True jika LinkedList kosong
 			return head == NULL;
@@ -37,6 +37,7 @@ class LinkedList{
 
 template<class T>
 LinkedList<T>::LinkedList(){
+	count = 0;
 	head = NULL;
 }
 
@@ -45,7 +46,10 @@ LinkedList<T>::LinkedList(const LinkedList<T>& L){
 	Node<T>* iter = L.head;
     while(iter != NULL) {
     	add(iter->info);
+		iter = iter->next;
     }
+
+	count = L.count;
 }
 
 template<class T>
@@ -56,30 +60,40 @@ LinkedList<T>::~LinkedList(){
 		delete iter;
 	}
 }
-/*
+
 template<class T>
 LinkedList<T>& LinkedList<T>::operator= (const LinkedList<T>& L){
 	if(&L != this) {
-        	
         Node<T>* iter = head;
-        while(iter->next != NULL) {
-        	head = head->next;
-        	delete iter;
-            iter = head;
-        }
-        		
+
+		if (iter != NULL)
+		{
+			while(iter->next != NULL) {
+				head = head->next;
+				delete iter;
+				iter = head;
+			}
+			//delete iter;
+		}
+		
+		count = 0;
+
         iter = L.head;
         while(iter != NULL) {
             this->add(iter->info);
 			iter = iter->next;
         }
     }
+
     return *this;
-}*/
+}
 
 template<class T>
 T LinkedList<T>::get(int index){
-	if(!isEmpty()){
+	if (isEmpty() || index >= count){
+		return NULL;
+	}
+	else{
 		Node<T>* iter = head;
 		int currentIndex = 0;
 
@@ -97,9 +111,6 @@ T LinkedList<T>::get(int index){
 		{
 			return NULL;
 		}
-	}
-	else{
-		return NULL;
 	}
 }
 
@@ -129,6 +140,7 @@ void LinkedList<T>::remove(T element){
 			}
 
 			delete iter;
+			count--;
 		}
 	}
 }
@@ -137,7 +149,7 @@ template<class T>
 void LinkedList<T>::add(T element){
 	Node<T>* input = new Node<T>();	
 	input->info = element;
-			
+	
 	if(!isEmpty()){
 		Node<T>* iter = head;
 		while(iter->next != NULL){
@@ -149,6 +161,7 @@ void LinkedList<T>::add(T element){
 	else{
 		head = input;
 	}
+	count++;
 }
 
 template<class T>

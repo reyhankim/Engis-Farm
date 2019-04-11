@@ -10,49 +10,66 @@
 #include "FarmAnimal.hpp"
 #include "Player.hpp"
 #include <string>
+
+#define DEFAULT_FARM_MAP_HEIGHT 15  // Tinggi peta farm default
+#define DEFAULT_FARM_MAP_WIDTH 15   // Lebar peta farm default
+
 using namespace std;
 
 // Kelas Scene adalah blueprint dari objek yang menampung koleksi objek pada game serta melakukan update terhadap peta pada Farm
 class Scene {
-private:
-    const int DEFAULT_FARM_MAP_HEIGHT;      // Tinggi peta farm default
-    const int DEFAULT_FARM_MAP_WIDTH;       // Lebar peta farm default
 
-    string sessionName;                     // nama pemain
+    private:
+        char **farmMap;                         // Kumpulan hasil render karakter dari objek-objek pada farm
 
-    LinkedList<Cell *> field;                // LinkedList yang menyimpan koleksi Cell
-    LinkedList<FarmAnimal *> animals;        // LinkedList yang menyimpan koleksi Animal
+        // Memanggil method render setiap objek dalam Fields dan menyimpannya
+        // dalam Canvas, kemudian melakukan hal yang sama dengan Animals dan
+        // terakhir player.
+        void UpdateFarmMap();
 
-    Player player;                          // Instansiasi player
+        void animalRandomMove(FarmAnimal* animal);
 
-    char **farmMap;                         // Kumpulan hasil render karakter dari objek-objek pada farm
-    int farmMapHeight;                      // Tinggi peta farm
-    int farmMapWidth;                       // Lebar peta farm
+        LinkedList<Cell *> fieldGenerator();
 
-    // Memanggil method render setiap objek dalam Fields dan menyimpannya
-    // dalam Canvas, kemudian melakukan hal yang sama dengan Animals dan
-    // terakhir player.
-    void UpdateFarmMap();
+        LinkedList<FarmAnimal *> animalGenerator(int modifier);
 
-    LinkedList<Cell *> fieldGenerator();
+    public:
+        string sessionName;                     // nama pemain
 
-    LinkedList<FarmAnimal *> animalGenerator(int modifier);
+        int farmMapHeight;                      // Tinggi peta farm
+        int farmMapWidth;                       // Lebar peta farm
 
-public:
-    // CTOR
-    Scene();
+        LinkedList<Cell *> field;                // LinkedList yang menyimpan koleksi Cell
+        LinkedList<FarmAnimal *> animals;        // LinkedList yang menyimpan koleksi Animal
 
-    // CTOR user defined
-    Scene(string _sessionName, int _farmMapHeight, int _farmMapWidth);
+        Player player;                          // Instansiasi player
 
-    // CCTOR
-    Scene(Scene &oldScene);
+        // CTOR
+        Scene();
 
-    // DTOR
-    ~Scene();
+        // CTOR user defined
+        Scene(string _sessionName, int _farmMapHeight, int _farmMapWidth);
 
-    // menampilkan jendela permainan di konsol
-    void drawScene();
+        // CCTOR
+        Scene(Scene &oldScene);
+
+        // DTOR
+        ~Scene();
+
+        // menampilkan jendela permainan di konsol
+        void drawScene();
+
+        void commandMove(int direction);
+
+        void commandInteract();
+
+        void commandKill();
+
+        void commandGrow();
+
+        void commandTalk();
+
+        void commandMix();
 };
 
 #endif

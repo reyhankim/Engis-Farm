@@ -8,10 +8,10 @@ Cow::Cow(int axis, int ordinat): FarmAnimal(axis, ordinat){
 
 }
 
-// mengembalikan karakter W
+// mengembalikan karakter C
 char Cow::render() const
 {
-    return 'W';
+    return 'C';
 }
 
 // mengembalikan suara sapi misal "Moo!"

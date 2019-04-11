@@ -5,10 +5,10 @@
 
 Chicken::Chicken(int axis, int ordinat) : FarmAnimal(axis, ordinat) {}
 
-// mengembalikan karakter C
+// mengembalikan karakter c
 char Chicken::render() const
 {
-    return 'C';
+    return 'c';
 }
 
  // mengembalikan suara ayam misal "Petok petok!"
