@@ -259,3 +259,33 @@ LinkedList<FarmAnimal *> Scene::animalGenerator(int modifier)
 
     return newAnimals;
 }
+
+void Scene::commandMove(int direction)
+{
+
+}
+
+void Scene::commandInteract()
+{
+
+}
+
+void Scene::commandKill()
+{
+
+}
+
+void Scene::commandGrow()
+{
+
+}
+
+void Scene::commandTalk()
+{
+
+}
+
+void Scene::commandMix()
+{
+    
+}
