@@ -13,7 +13,7 @@ class Land : public Cell {
 	protected :
 		bool grassed;           // Menyimpan boolean untuk mengetahui Land tersebut ditumbuhi rumput atau tidak
 		// menentukan secara acak apakah Land akan berrumput (dipanggil oleh CTOR)
-		int const chanceGrassed = 70;
+		int const chanceGrassed = 5;
 		
 	public :
 		//CTOR : Memaanggil randomGrassed()
