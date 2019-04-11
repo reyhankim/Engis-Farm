@@ -14,7 +14,8 @@ Scene::Scene(): sessionName("guest"),
                 farmMapHeight(DEFAULT_FARM_MAP_HEIGHT),
                 farmMapWidth(DEFAULT_FARM_MAP_WIDTH),
                 field(fieldGenerator()),
-                animals(animalGenerator(3))
+                animals(animalGenerator(3)),
+                player(farmMapWidth/2, farmMapHeight/2)
 {
     farmMap = new char*[farmMapHeight];
     for(int i = 0; i < farmMapHeight; ++i)
@@ -26,7 +27,8 @@ Scene::Scene(string _sessionName, int _farmMapHeight, int _farmMapWidth) :
                 farmMapHeight(_farmMapHeight),
                 farmMapWidth(_farmMapWidth),
                 field(fieldGenerator()),
-                animals(animalGenerator(3))
+                animals(animalGenerator(3)),
+                player(farmMapWidth/2, farmMapHeight/2)
 {
     farmMap = new char*[farmMapHeight];
     for(int i = 0; i < farmMapHeight; ++i)
@@ -57,6 +59,8 @@ Scene::Scene(Scene &oldScene)
             this->farmMap[i][j] = oldScene.farmMap[i][j];
         }
     }
+
+    player = oldScene.player;
 }
 
 Scene::~Scene() {
@@ -111,6 +115,9 @@ void Scene::UpdateFarmMap() {
 
         this->farmMap[currentAnimal->getY()][currentAnimal->getX()] = currentAnimal->render();
     }
+
+    // Step 3: Memanggil render() untuk mendapatkan posisi A player
+    this->farmMap[player.getY()][player.getX()] = player.render();
 }
 
 void Scene::animalRandomMove(FarmAnimal* animal)
