@@ -29,5 +29,8 @@ int main() {
         {
             mainScene.commandMove(4);
         }
+        else if (command == "kill"){
+            mainScene.commandKill();
+        }
     }
 }

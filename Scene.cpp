@@ -273,7 +273,75 @@ void Scene::commandInteract()
 
 void Scene::commandKill()
 {
+    bool killable = true;
+    int face = player.getFacing();
+    int destX, destY;
 
+    if(face == 1){
+        if(player.getY() - 1 < 0){
+            killable = false;
+        }
+        else{
+            destY = player.getY() - 1;
+            destX = player.getX();
+        }
+    }
+    else if(face == 2){
+        if(player.getX() + 1 < 0){
+            killable = false;
+        }
+        else{
+            destY = player.getY();
+            destX = player.getX() + 1;
+        }
+    }
+    else if(face == 3){
+        if(player.getY() + 1 < 0){
+            killable = false;
+        }
+        else{
+            destY = player.getY() + 1;
+            destX = player.getX();
+        }
+    }
+    else if(face == 4){
+        if(player.getX() - 1 < 0){
+            killable = false;
+        }
+        else{
+            destY = player.getY();
+            destX = player.getX() - 1;
+        }
+    }
+
+    FarmAnimal* tempAnimal;
+    FarmAnimal* killAnimal;
+
+    for (int i = 0; i<animals.count; i++){
+        tempAnimal = animals.get(i);
+
+        if (tempAnimal->getX() == destX && tempAnimal->getY() == destY){
+            if(dynamic_cast<MeatProducingFarmAnimal*>(tempAnimal)){
+                killAnimal = tempAnimal;
+            }
+        }
+    }
+
+    if(killable && killAnimal != NULL){
+        if(dynamic_cast<Chicken*>(killAnimal)){
+            player.addToInventory(new ChickenMeat());
+        }
+        else if(dynamic_cast<Cow*>(killAnimal)){
+            player.addToInventory(new CowMeat());
+        }
+        else if(dynamic_cast<Horse*>(killAnimal)){
+            player.addToInventory(new HorseMeat());
+        }
+        else if(dynamic_cast<Swine*>(killAnimal)){
+            player.addToInventory(new SwineMeat());
+        }
+        killAnimal->~FarmAnimal();
+    }
 }
 
 void Scene::commandGrow()
