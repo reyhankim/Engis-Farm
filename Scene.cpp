@@ -356,6 +356,7 @@ void Scene::commandKill()
         else if(dynamic_cast<Swine*>(killAnimal)){
             player.addToInventory(new SwineMeat());
         }
+        //animals.remove(killAnimal);
         killAnimal->~FarmAnimal();
     }
 }
@@ -367,7 +368,61 @@ void Scene::commandGrow()
 
 void Scene::commandTalk()
 {
+    bool talkable = true;
+    int face = player.getFacing();
+    int destX, destY;
 
+    if(face == 1){
+        if(player.getY() - 1 < 0){
+            talkable = false;
+        }
+        else{
+            destY = player.getY() - 1;
+            destX = player.getX();
+        }
+    }
+    else if(face == 2){
+        if(player.getX() + 1 < 0){
+            talkable = false;
+        }
+        else{
+            destY = player.getY();
+            destX = player.getX() + 1;
+        }
+    }
+    else if(face == 3){
+        if(player.getY() + 1 < 0){
+            talkable = false;
+        }
+        else{
+            destY = player.getY() + 1;
+            destX = player.getX();
+        }
+    }
+    else if(face == 4){
+        if(player.getX() - 1 < 0){
+            talkable = false;
+        }
+        else{
+            destY = player.getY();
+            destX = player.getX() - 1;
+        }
+    }
+
+    FarmAnimal* tempAnimal;
+    FarmAnimal* talkAnimal;
+
+    for (int i = 0; i<animals.count; i++){
+        tempAnimal = animals.get(i);
+
+        if (tempAnimal->getX() == destX && tempAnimal->getY() == destY){
+            talkAnimal = tempAnimal;
+        }
+    }
+
+    if(talkable && talkAnimal != NULL){
+        cout << talkAnimal->sound() << endl;
+    }
 }
 
 void Scene::commandMix()

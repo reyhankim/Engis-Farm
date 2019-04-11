@@ -32,5 +32,8 @@ int main() {
         else if (command == "kill"){
             mainScene.commandKill();
         }
+        else if (command == "talk"){
+            mainScene.commandTalk();
+        }
     }
 }
