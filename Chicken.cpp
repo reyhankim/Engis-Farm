@@ -2,6 +2,7 @@
 
 #include "Chicken.hpp"
 #include "ChickenEgg.hpp"
+#include "ChickenMeat.hpp"
 
 Chicken::Chicken(int axis, int ordinat) : FarmAnimal(axis, ordinat) {}
 
@@ -26,5 +27,5 @@ Product* Chicken::getProductInteracted() const
 // mengembalikan FarmProduct yang dihasilkan jika hewan dibunuh
 Product* Chicken::getProductKilled() const
 {
-    return NULL;
+    return new ChickenMeat();
 }

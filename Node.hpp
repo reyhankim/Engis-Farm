@@ -7,10 +7,12 @@ template <class T>
 class Node {
     public:
         T info;
-        Node *next;
+        Node *next = NULL;
 
         // CTOR DEF
         Node() = default;
+
+        ~Node() = default;
 
         // CCTOR
         Node(const T& input){

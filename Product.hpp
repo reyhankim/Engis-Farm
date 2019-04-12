@@ -12,7 +12,7 @@ protected:
     int harga;              // Menyimpan harga dari Product
 
 public:
-    virtual ~Product();     // virtual DTOR
+    virtual ~Product() = default;     // virtual DTOR
 
     int getHarga() const;   // Getter harga
 

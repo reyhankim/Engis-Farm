@@ -12,9 +12,9 @@ class Cell : public Renderable {
     protected:
         bool walkable;				// Boolean walkable = true untuk objek yang dapat ditempati oleh Player atau Animal
     public:
-        Cell();
+        Cell() = default;
         Cell(int x, int y);
-        virtual ~Cell();           // Virtual DTOR
+        virtual ~Cell() = default;           // Virtual DTOR
         // getter untuk walkable
 		bool isWalkable() const;
 		void setWalkable(bool input);        // setter untuk walkable

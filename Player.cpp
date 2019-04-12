@@ -18,7 +18,7 @@ Player::Player(int x, int y) : MovingObject(x, y){
 }
 
 Player::~Player(){
-    delete &productInventory;
+    productInventory.~LinkedList();
 }
 
 char Player::render() const {
@@ -28,7 +28,7 @@ char Player::render() const {
         case 2 :
             return '>';
         case 3 :
-            return 'V';
+            return 'v';
         case 4 :
             return '<';
         default :

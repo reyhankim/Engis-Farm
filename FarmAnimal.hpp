@@ -34,7 +34,7 @@ class FarmAnimal : public MovingObject, public Counter<FarmAnimal> {
         FarmAnimal(string name, bool _interactable);
 
         // DTOR Virtual
-        virtual ~FarmAnimal();
+        virtual ~FarmAnimal() = default;
 
         // getter
         bool isInteractable() const;

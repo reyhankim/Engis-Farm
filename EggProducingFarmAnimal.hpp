@@ -12,7 +12,7 @@
 class EggProducingFarmAnimal : virtual public FarmAnimal {
     public:
         // DTOR Virtual
-        virtual ~EggProducingFarmAnimal();
+        virtual ~EggProducingFarmAnimal() = default;
         // method untuk pergerakan animal, hanya dapat bergerak di Coop
         // menerima List of Renderable* untuk mengecek cell yang akan ditempati
 };

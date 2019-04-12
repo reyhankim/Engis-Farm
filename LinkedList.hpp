@@ -30,7 +30,7 @@ class LinkedList{
 
 		void add(T element);		// Menambahkan elemen sebagai elemen paling akhir
 
-		void remove(T element);		// Membuang elemen dari linked list
+		void remove(const T& element);		// Membuang elemen dari linked list
 
 		T get(int index);			// Mengembalikan elemen pada indeks
 };
@@ -57,6 +57,7 @@ LinkedList<T>::~LinkedList(){
 	while(!isEmpty()){
 		Node<T>* iter = head;
 		head = head->next;
+		delete iter->info;
 		delete iter;
 	}
 }
@@ -65,7 +66,7 @@ template<class T>
 LinkedList<T>& LinkedList<T>::operator= (const LinkedList<T>& L){
 	if(&L != this) {
         Node<T>* iter = head;
-
+		
 		if (iter != NULL)
 		{
 			while(iter->next != NULL) {
@@ -115,11 +116,12 @@ T LinkedList<T>::get(int index){
 }
 
 template<class T>
-void LinkedList<T>::remove(T element){
+void LinkedList<T>::remove(const T& element){
 	if(!isEmpty()){
 		Node<T>* iter = head;
 		Node<T>* prev = NULL;
-		bool found;
+		bool found = false;
+
 		while(!found && iter->next != NULL){
 			if(iter->info == element){
 				found = true;
@@ -135,11 +137,16 @@ void LinkedList<T>::remove(T element){
 		}
 
 		if(found){
-			if(prev != NULL){
+			if(prev == NULL){
+				head = NULL;
+			}
+			else
+			{
 				prev->next = iter->next;
 			}
-
-			delete iter;
+			/*
+			delete iter;==28940==    at 0x10DBF8: FarmAnimal::getHungry==28940==    at 0x10DBF8: FarmAnimal::getHungryLevel() const (in /home/miner46er/Desktop/Tugas/OOP/u/Engis-Farm/a.out)Level() const (in /home/miner46er/Desktop/Tugas/OOP/u/Engis-Farm/a.out)
+			*/
 			count--;
 		}
 	}

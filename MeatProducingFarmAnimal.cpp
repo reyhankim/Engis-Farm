@@ -4,4 +4,3 @@
 
 // Class MeatProducingFarmAnimal digunakan untuk mengelompokkan animal
         // DTOR Virtual
-        MeatProducingFarmAnimal::~MeatProducingFarmAnimal() {}

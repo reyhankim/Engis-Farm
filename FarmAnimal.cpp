@@ -14,8 +14,6 @@ FarmAnimal::FarmAnimal(int x, int y) : MovingObject(x, y) {
     this->hungryLevel = this->hungryStart;
 }
 
-FarmAnimal::~FarmAnimal() {}
-
 bool FarmAnimal::isInteractable() const{
     return this->interactable;
 }

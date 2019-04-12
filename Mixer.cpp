@@ -14,7 +14,7 @@ using namespace std;
 Mixer::Mixer(int axis, int ordinat) : Facility (axis, ordinat) {}
 
 char Mixer::render() const{
-    return 'X';
+    return 'M';
 }
 
 template <>

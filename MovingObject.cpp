@@ -9,7 +9,7 @@ MovingObject::MovingObject(int x, int y) : Renderable(x, y) {}
 
 MovingObject::~MovingObject() {}
 
-int MovingObject::move(int direction, LinkedList<Cell*> field, int fieldXBoundary, int fieldYBoundary)
+int MovingObject::move(int direction, LinkedList<Cell*>& field, int fieldXBoundary, int fieldYBoundary)
 {
     bool canMove = true;
     int destX;

@@ -12,7 +12,7 @@
 class MilkProducingFarmAnimal : virtual public FarmAnimal {
     public:
         // DTOR Virtual
-        virtual ~MilkProducingFarmAnimal();
+        virtual ~MilkProducingFarmAnimal() = default;
 };
 
 

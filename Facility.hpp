@@ -13,7 +13,7 @@ class Facility : public Cell {
 public:
     Facility(int x, int y);
     
-    virtual ~Facility(); // virtual DTOR
+    virtual ~Facility() = default; // virtual DTOR
 };
 
 

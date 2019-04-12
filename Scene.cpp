@@ -64,8 +64,8 @@ Scene::Scene(Scene &oldScene)
 }
 
 Scene::~Scene() {
-    delete &this->field;
-    delete &this->animals;
+    field.~LinkedList();
+    animals.~LinkedList();
     for(int i = 0; i < farmMapHeight; ++i)
         delete farmMap[i];
     delete farmMap;
@@ -330,10 +330,12 @@ void Scene::commandKill()
         }
     }
 
-    FarmAnimal* tempAnimal;
-    FarmAnimal* killAnimal;
+    FarmAnimal* tempAnimal = NULL;
+    FarmAnimal* killAnimal = NULL;
+
     bool found = false;
     int i = 0;
+    
     while(i < animals.count && !found){
         tempAnimal = animals.get(i);
 
@@ -351,11 +353,11 @@ void Scene::commandKill()
         }
     }
 
-    if(killable && killAnimal != NULL){
+    if(killable && (killAnimal != NULL)){
         player.addToInventory(killAnimal->getProductKilled());
         
         animals.remove(killAnimal);
-        
+        //delete killAnimal;
     }
     else{
         cout << "Tidak ada hewan di dekatmu" << endl;
@@ -404,8 +406,8 @@ void Scene::commandGrow()
         }
     }
 
-    Cell* target;
-    Cell* tempTarget;
+    Land* target = NULL;
+    Cell* tempTarget = NULL;
 
     if(player.getCurrentWater() == 0){
         cout << "Air kamu habis" << endl;
@@ -416,9 +418,7 @@ void Scene::commandGrow()
             tempTarget = field.get(i);
 
             if (tempTarget->getX() == destX && tempTarget->getY() == destY){
-                if(dynamic_cast<Land*>(tempTarget)){
-                    target = tempTarget;
-                }
+                target = dynamic_cast<Land*>(tempTarget);
             }
         }
     }
@@ -471,8 +471,8 @@ void Scene::commandTalk()
         }
     }
 
-    FarmAnimal* tempAnimal;
-    FarmAnimal* talkAnimal;
+    FarmAnimal* tempAnimal = NULL;
+    FarmAnimal* talkAnimal = NULL;
 
     for (int i = 0; i<animals.count; i++){
         tempAnimal = animals.get(i);
@@ -482,7 +482,7 @@ void Scene::commandTalk()
         }
     }
 
-    if(talkable && talkAnimal != NULL){
+    if(talkable && (talkAnimal != NULL)){
         cout << talkAnimal->sound() << endl;
     }
 }

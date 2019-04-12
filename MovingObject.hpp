@@ -25,7 +25,7 @@ class MovingObject : public Renderable {
         virtual ~MovingObject();
 
         // bergerak 
-        int move(int direction, LinkedList<Cell*> field, int fieldXBoundary, int fieldYBoundary);
+        int move(int direction, LinkedList<Cell*>& field, int fieldXBoundary, int fieldYBoundary);
 };
 
 

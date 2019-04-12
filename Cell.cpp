@@ -5,13 +5,8 @@
 
 using namespace std;
 
-Cell::Cell(){
-}
-
 Cell::Cell(int x, int y) : Renderable(x, y) {
 }
-
-Cell::~Cell() {}
 
 bool Cell::isWalkable() const{
     return this->walkable;

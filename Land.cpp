@@ -13,8 +13,6 @@ Land::Land(int x, int y) : Cell(x, y){
     randomGrass();
 }
 
-Land::~Land() {}
-
 void Land::randomGrass(){
     if(rand() % 100 < Land::chanceGrassed){
         setGrass(true);

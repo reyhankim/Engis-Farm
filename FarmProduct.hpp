@@ -12,7 +12,7 @@
 class FarmProduct : public Product {
     public:
         // Virtual DTOR
-        virtual ~FarmProduct();
+        virtual ~FarmProduct() = default;
 };
 
 

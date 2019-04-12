@@ -22,7 +22,7 @@ class Land : public Cell {
 		Land(int x, int y);
 
 		// virtual DTOR
-		virtual ~Land();
+		virtual ~Land() = default;
 		
 		//SELECTOR
 		void setGrass(bool input);      // setter boolean grassed
